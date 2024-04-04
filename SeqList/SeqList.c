@@ -95,7 +95,7 @@ void SLPrint(SL s)
 void SLPopBack(SL* ps)
 {
 	assert(ps);
-	assert(ps->size != 0);
+	assert(ps->size > 0);
 	//ps->arr[ps->size - 1] = -1;
 	--(ps->size);
 }
@@ -103,10 +103,49 @@ void SLPopBack(SL* ps)
 void SLPopFront(SL* ps)
 {
 	assert(ps);
-	assert(ps->size != 0);
-	for (int i = 0; i < ps->size - 1; i--)
+	assert(ps->size > 0);
+	for (int i = 0; i < ps->size - 1; i++)
 	{
 		ps->arr[i] = ps->arr[i + 1];
 	}
 	--(ps->size);
+}
+
+void SLInsert(SL* ps, int pos, SLDataType x)
+{
+	assert(ps);
+	assert(pos >= 0 && pos <= ps->size);
+
+	SLCheckCapacity(ps);
+
+	for (int i = ps->size; i > pos; i--)
+	{
+		ps->arr[i] = ps->arr[i - 1];
+	}
+	ps->arr[pos] = x;
+	ps->size++;
+}
+
+void SLErase(SL* ps, int pos)
+{
+	assert(ps);
+	assert(pos >= 0 && pos < ps->size);
+	for (int i = pos; i < ps->size - 1; i++)
+	{
+		ps->arr[i] = ps->arr[i + 1];
+	}
+	ps->size--;
+}
+
+int SLFind(SL* ps, SLDataType x)
+{
+	assert(ps);
+	for (int i = 0; i < ps->size; i++)
+	{
+		if (ps->arr[i] == x)
+		{
+			return i;
+		}
+	}
+	return -1;
 }
