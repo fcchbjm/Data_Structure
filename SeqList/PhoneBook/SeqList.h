@@ -3,8 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <assert.h>
+#include "Contact.h"
 
-typedef int SLDataType;
+//typedef int SLDataType;
+typedef PeoInfo SLDataType;
 
 //¶¯Ì¬Ë³Ðò±í
 typedef struct SeqList
