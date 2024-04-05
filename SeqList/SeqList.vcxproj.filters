@@ -13,18 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="源文件\PhoneBook">
+      <UniqueIdentifier>{189175b0-af90-4c1a-9f7e-f01c483db8ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\PhoneBook">
+      <UniqueIdentifier>{ac78e802-5764-4cb7-9b55-6fc7ac5812a8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SeqList.h">
-      <Filter>头文件</Filter>
+    <ClCompile Include="PhoneBook\SeqList.c">
+      <Filter>源文件\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="PhoneBook\Contact.c">
+      <Filter>源文件\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="PhoneBook\test.c">
+      <Filter>源文件\PhoneBook</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PhoneBook\SeqList.h">
+      <Filter>头文件\PhoneBook</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="SeqList.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
-    <ClCompile Include="test.c">
-      <Filter>源文件</Filter>
-    </ClCompile>
+    <ClInclude Include="PhoneBook\Contact.h">
+      <Filter>头文件\PhoneBook</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
