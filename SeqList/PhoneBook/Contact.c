@@ -3,6 +3,7 @@
 
 void ContactInit(Contact* con)
 {
+	//con¾ÍÊÇSL
 	SLInit(con);
 }
 
