@@ -5,6 +5,7 @@
 #define TEL_MAX 20
 #define ADDR_MAX 100
 
+//通讯录结构体
 typedef struct PersonInfo
 {
 	char name[NAME_MAX];
