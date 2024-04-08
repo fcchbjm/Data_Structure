@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SeqList.h" />
+    <ClInclude Include="PhoneBook\Contact.h" />
+    <ClInclude Include="PhoneBook\SeqList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SeqList.c" />
-    <ClCompile Include="test.c" />
+    <ClCompile Include="PhoneBook\Contact.c" />
+    <ClCompile Include="PhoneBook\SeqList.c" />
+    <ClCompile Include="PhoneBook\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

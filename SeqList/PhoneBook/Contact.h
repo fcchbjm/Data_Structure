@@ -15,6 +15,7 @@ typedef struct PersonInfo
 	char addr[ADDR_MAX];
 }PeoInfo;
 
+//对结构体SL进行重命名为Contact
 typedef struct SeqList Contact;
 
 //struct SeqList;//声明结构体

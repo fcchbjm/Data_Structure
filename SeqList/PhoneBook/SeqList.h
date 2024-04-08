@@ -6,9 +6,12 @@
 #include "Contact.h"
 
 //typedef int SLDataType;
+
+//将通讯录结构体类型重命名为SLDataType
 typedef PeoInfo SLDataType;
 
 //动态顺序表
+//将结构体SeqList重命名为SL
 typedef struct SeqList
 {
 	SLDataType* arr;
