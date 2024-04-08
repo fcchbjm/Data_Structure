@@ -137,15 +137,15 @@ void SLErase(SL* ps, int pos)
 	ps->size--;
 }
 
-int SLFind(SL* ps, SLDataType x)
-{
-	assert(ps);
-	for (int i = 0; i < ps->size; i++)
-	{
-		if (ps->arr[i] == x)
-		{
-			return i;
-		}
-	}
-	return -1;
-}
+//int SLFind(SL* ps, SLDataType x)
+//{
+//	assert(ps);
+//	for (int i = 0; i < ps->size; i++)
+//	{
+//		if (ps->arr[i] == x)
+//		{
+//			return i;
+//		}
+//	}
+//	return -1;
+//}

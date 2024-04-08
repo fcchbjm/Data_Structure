@@ -16,6 +16,7 @@ typedef struct PersonInfo
 }PeoInfo;
 
 //对结构体SL进行重命名为Contact
+//因为没有不会SL的头文件，使用声明+typedef
 typedef struct SeqList Contact;
 
 //struct SeqList;//声明结构体
