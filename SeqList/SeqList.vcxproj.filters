@@ -21,22 +21,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="PhoneBook\SeqList.c">
-      <Filter>源文件\PhoneBook</Filter>
-    </ClCompile>
-    <ClCompile Include="PhoneBook\Contact.c">
-      <Filter>源文件\PhoneBook</Filter>
-    </ClCompile>
-    <ClCompile Include="PhoneBook\test.c">
-      <Filter>源文件\PhoneBook</Filter>
-    </ClCompile>
+    <ClInclude Include="SeqList.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PhoneBook\SeqList.h">
-      <Filter>头文件\PhoneBook</Filter>
-    </ClInclude>
-    <ClInclude Include="PhoneBook\Contact.h">
-      <Filter>头文件\PhoneBook</Filter>
-    </ClInclude>
+    <ClCompile Include="SeqList.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
