@@ -94,6 +94,8 @@ void menu(void)
 	printf("*           3.修改联系人            *\n");
 	printf("*           4.查找联系人            *\n");
 	printf("*           5.展示联系人            *\n");
+	printf("*           6.读取联系人            *\n");
+	printf("*           7.保存联系人            *\n");
 	printf("*              0.退出               *\n");
 	printf("*                                   *\n");
 	printf("*************************************\n");
@@ -126,6 +128,12 @@ int main()
 			break;
 		case 5:
 			ContactShow(&con);
+			break;
+		case 6:
+			ReadContact(&con);
+			break;
+		case 7:
+			SaveContact(&con);
 			break;
 		case 0:
 			printf("退出通讯录……\n");

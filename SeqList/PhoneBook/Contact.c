@@ -12,6 +12,7 @@ void ContactInit(Contact* con)
 //通讯录的销毁
 void ContactDestory(Contact* con)
 {
+	//SaveContact(con);//在销毁退出前保存数据
 	SLDestory(con);
 }
 
@@ -107,7 +108,7 @@ void ContactModify(Contact* con)
 void ContactFind(Contact* con)
 {
 	char name[NAME_MAX] = { 0 };
-	printf("请输入要修改的联系人姓名：");
+	printf("请输入要查找的联系人姓名：");
 	scanf("%s", name);
 
 	int find = FindByName(con, name);
@@ -145,3 +146,57 @@ void ContactShow(Contact* con)
 	}
 }
 
+//保存通讯录数据
+void SaveContact(Contact* con)
+{
+	FILE* pf = NULL;
+	pf = fopen("Contact.dat", "w");
+	if (pf == NULL)
+	{
+		perror("Failed to write to file");
+		return;
+	}
+	//写入数据
+	fprintf(pf, "%d\n", con->size);//写入有效数据个数
+	for (int i = 0; i < con->size; i++)//写入通讯录数据
+	{
+		fprintf(pf, "%s %s %d %s %s\n", \
+			con->arr[i].name, \
+			con->arr[i].gender, \
+			con->arr[i].age, \
+			con->arr[i].tel, \
+			con->arr[i].addr);
+	}
+	printf("数据保存成功！\n");
+	fclose(pf);
+	pf = NULL;
+}
+
+//读取通讯录数据
+void ReadContact(Contact* con)
+{
+	FILE* pf = NULL;
+	pf = fopen("Contact.dat", "r");
+	if (pf == NULL)
+	{
+		perror("Failed to read to file");
+		return;
+	}
+	fscanf(pf, "%d", &(con->size));//读取有效数据个数
+	for (int i = 0; i < con->size; i++)
+	{
+		PeoInfo info = { 0 };
+		fscanf(pf, "\n%s %s %d %s %s", \
+			info.name, \
+			info.gender, \
+			& (info.age), \
+			info.tel, \
+			info.addr);
+		//SLPushBack(con, info);//不能使用尾插
+		SLCheckCapacity(con);//容量判断
+		con->arr[i] = info;
+	}
+	printf("数据读取成功！\n");
+	fclose(pf);
+	pf = NULL;
+}

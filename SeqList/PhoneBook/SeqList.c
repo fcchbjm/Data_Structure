@@ -21,7 +21,7 @@ void SLDestory(SL* ps)
 void SLCheckCapacity(SL* ps)
 {
 	//在插入数据前先判断空间够不够
-	if (ps->size == ps->capacity)
+	if (ps->size >= ps->capacity)//为通讯录读取增容创造条件
 	{
 		//申请空间 -- 增容 --> realloc
 		//增容一般是两倍或者三倍的增加，过大或者过小，频繁的增容，会使程序的运行效率降低

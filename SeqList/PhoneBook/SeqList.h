@@ -40,4 +40,4 @@ void SLInsert(SL* ps, int pos, SLDataType x);
 //任意位置删除数据
 void SLErase(SL* ps, int pos);
 //顺序表的查找
-int SLFind(SL* ps, SLDataType x);
+//int SLFind(SL* ps, SLDataType x);

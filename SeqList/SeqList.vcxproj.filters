@@ -19,6 +19,9 @@
     <Filter Include="头文件\PhoneBook">
       <UniqueIdentifier>{ac78e802-5764-4cb7-9b55-6fc7ac5812a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="资源文件\PhoneBook">
+      <UniqueIdentifier>{813ef5d2-57b1-42bb-af1c-7b8a5901fd9f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="PhoneBook\Contact.h">
@@ -38,5 +41,10 @@
     <ClCompile Include="PhoneBook\test.c">
       <Filter>源文件\PhoneBook</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Contact.dat">
+      <Filter>资源文件\PhoneBook</Filter>
+    </None>
   </ItemGroup>
 </Project>

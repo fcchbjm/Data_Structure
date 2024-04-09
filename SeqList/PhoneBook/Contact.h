@@ -36,3 +36,9 @@ void ContactModify(Contact* con);
 void ContactFind(Contact* con);
 //展示通讯录数据
 void ContactShow(Contact* con);
+//保存通讯录数据
+void SaveContact(Contact* con);
+//读取通讯录数据
+void ReadContact(Contact* con);
+//顺序表的增容
+void SLCheckCapacity(Contact* con);
