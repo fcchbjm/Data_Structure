@@ -41,4 +41,17 @@
       <UniqueIdentifier>{bd933637-9363-4d5f-a3e4-375afbbe7f12}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\SList\SList.h">
+      <Filter>头文件\SList</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\SList\SList.c">
+      <Filter>源文件\SList</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SList\test.c">
+      <Filter>源文件\SList</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
