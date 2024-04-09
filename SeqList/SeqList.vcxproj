@@ -18,18 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="PhoneBook\Contact.h" />
-    <ClInclude Include="PhoneBook\SeqList.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="PhoneBook\Contact.c" />
-    <ClCompile Include="PhoneBook\SeqList.c" />
-    <ClCompile Include="PhoneBook\test.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Contact.dat" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>

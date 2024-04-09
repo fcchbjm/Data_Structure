@@ -13,38 +13,32 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="源文件\PhoneBook">
-      <UniqueIdentifier>{189175b0-af90-4c1a-9f7e-f01c483db8ce}</UniqueIdentifier>
+    <Filter Include="头文件\SeqList">
+      <UniqueIdentifier>{e900382e-d077-4213-ae6b-3487f053a0da}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\PhoneBook">
+    <Filter Include="头文件\SeqList\PhoneBook">
       <UniqueIdentifier>{ac78e802-5764-4cb7-9b55-6fc7ac5812a8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="资源文件\PhoneBook">
+    <Filter Include="源文件\SeqList">
+      <UniqueIdentifier>{cd95577d-5edd-4476-b6ee-928cc5c15fb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SeqList\PhoneBook">
+      <UniqueIdentifier>{189175b0-af90-4c1a-9f7e-f01c483db8ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\SeqList">
+      <UniqueIdentifier>{22f6b3d8-abee-41d9-8576-c323dc51bee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\SeqList\PhoneBook">
       <UniqueIdentifier>{813ef5d2-57b1-42bb-af1c-7b8a5901fd9f}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="PhoneBook\Contact.h">
-      <Filter>头文件\PhoneBook</Filter>
-    </ClInclude>
-    <ClInclude Include="PhoneBook\SeqList.h">
-      <Filter>头文件\PhoneBook</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="PhoneBook\Contact.c">
-      <Filter>源文件\PhoneBook</Filter>
-    </ClCompile>
-    <ClCompile Include="PhoneBook\SeqList.c">
-      <Filter>源文件\PhoneBook</Filter>
-    </ClCompile>
-    <ClCompile Include="PhoneBook\test.c">
-      <Filter>源文件\PhoneBook</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Contact.dat">
-      <Filter>资源文件\PhoneBook</Filter>
-    </None>
+    <Filter Include="头文件\SList">
+      <UniqueIdentifier>{b168ed2b-e04b-48c0-83c6-917a585d61e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SList">
+      <UniqueIdentifier>{6dd2a3e0-fcae-4939-a124-9e6db85778b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\SList">
+      <UniqueIdentifier>{bd933637-9363-4d5f-a3e4-375afbbe7f12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
