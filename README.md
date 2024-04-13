@@ -3,23 +3,23 @@
 
 **顺序表基本结构**
 
-SeqList.c
+[SeqList.c](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/SeqList.c)
 
-SeqList.h
+[SeqList.h](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/SeqList.h)
 
-test.c
+[test.c](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/test.c)
 
 **项目：通讯录**
 
-Contact.c
+[Contact.c](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/PhoneBook/Contact.c)
 
-Contact.h
+[Contact.h](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/PhoneBook/Contact.h)
 
-SeqList.c
+[SeqList.c](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/PhoneBook/SeqList.c)
 
-SeqList.h
+[SeqList.h](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/PhoneBook/SeqList.h)
 
-test.c
+[test.c](https://github.com/fcchbjm/SeqListAndSList/blob/master/SeqList/PhoneBook/test.c)
 
 
 # SList 链表
