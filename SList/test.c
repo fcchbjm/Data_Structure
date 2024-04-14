@@ -45,16 +45,82 @@ void SListTest02()
 	//SLTPushFront(&plist, 8);
 	//SLTPrint(plist);
 
-	//≤‚ ‘Œ≤…æ
-	SLTPopBack(&plist);
-	SLTPrint(plist);
-	SLTPopBack(&plist);
-	SLTPrint(plist);
-	SLTPopBack(&plist);
-	SLTPrint(plist);
-	SLTPopBack(&plist);
-	SLTPrint(plist);
+	////≤‚ ‘Œ≤…æ
+	//SLTPopBack(&plist);
+	//SLTPrint(plist);
+	//SLTPopBack(&plist);
+	//SLTPrint(plist);
+	//SLTPopBack(&plist);
+	//SLTPrint(plist);
+	//SLTPopBack(&plist);
+	//SLTPrint(plist);
 
+	////≤‚ ‘Õ∑…æ
+	//SLTPopFront(&plist);
+	//SLTPrint(plist);
+	//SLTPopFront(&plist);
+	//SLTPrint(plist);
+	//SLTPopFront(&plist);
+	//SLTPrint(plist);
+	//SLTPopFront(&plist);
+	//SLTPrint(plist);
+
+	////≤‚ ‘≤È’“
+	//SLTNode* find = NULL;
+	//find = SLTFind(plist, 1);
+	//if (find)
+	//{
+	//	printf("’“µΩ¡À!\n");
+	//}
+	//else
+	//{
+	//	printf("√ª”–’“µΩ£°\n");
+	//}
+	//find = SLTFind(plist, 5);
+	//if (find)
+	//{
+	//	printf("’“µΩ¡À!\n");
+	//}
+	//else
+	//{
+	//	printf("√ª”–’“µΩ£°\n");
+	//}
+
+	////≤‚ ‘«∞≤Â»Î
+	//SLTNode* find = NULL;
+	//find = SLTFind(plist, 1);
+	//SLTInsert(&plist, find, 7);
+	//SLTPrint(plist);
+	//find = SLTFind(plist, 4);
+	//SLTInsert(&plist, find, 8);
+	//SLTPrint(plist);
+
+	////≤‚ ‘∫Û≤Â»Î
+	//SLTNode* find = NULL;
+	//find = SLTFind(plist, 1);
+	//SLTInsertAfter(find, 7);
+	//SLTPrint(plist);
+	//find = SLTFind(plist, 4);
+	//SLTInsertAfter(find, 8);
+	//SLTPrint(plist);
+
+	////≤‚ ‘…æ≥˝
+	//SLTNode* find = NULL;
+	//find = SLTFind(plist, 1);
+	//SLTErase(&plist, find);
+	//SLTPrint(plist);
+	//find = SLTFind(plist, 4);
+	//SLTErase(&plist, find);
+	//SLTPrint(plist);
+
+	//≤‚ ‘∫Û…æ≥˝
+	SLTNode* find = NULL;
+	find = SLTFind(plist, 1);
+	SLTEraseAfter(find);
+	SLTPrint(plist);
+	find = SLTFind(plist, 3);
+	SLTEraseAfter(find);
+	SLTPrint(plist);
 }
 
 int main()
