@@ -1,4 +1,4 @@
-#include"SList.h"
+#include "SList.h"
 
 //链表的打印
 void SLTPrint(SLTNode* phead)
@@ -191,3 +191,17 @@ void SLTEraseAfter(SLTNode* pos)
 	del = NULL;
 }
 
+//链表的销毁
+void SListDestory(SLTNode** pphead)
+{
+	assert(pphead && *pphead);
+
+	SLTNode* pcur = *pphead;
+	while (pcur)
+	{
+		SLTNode* next = pcur->next;
+		free(pcur);
+		pcur = next;
+	}
+	*pphead = NULL;
+}

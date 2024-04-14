@@ -1,4 +1,4 @@
-#include"SList.h"
+#include "SList.h"
 
 void SListTest01()
 {
@@ -29,14 +29,17 @@ void SListTest01()
 
 void SListTest02()
 {
+	//¥¥Ω®¡¥±Ì
 	SLTNode* plist = NULL;
 	SLTPushBack(&plist, 1);
 	SLTPushBack(&plist, 2);
 	SLTPushBack(&plist, 3);
 	SLTPushBack(&plist, 4);
 	SLTPrint(plist);
+
+	//≤‚ ‘Œ≤≤Â
 	//SLTPushBack(NULL, 5);
-	//
+	
 	//≤‚ ‘Õ∑≤Â
 	//SLTPushFront(&plist, 6);
 	//SLTPrint(plist);
@@ -113,13 +116,17 @@ void SListTest02()
 	//SLTErase(&plist, find);
 	//SLTPrint(plist);
 
-	//≤‚ ‘∫Û…æ≥˝
-	SLTNode* find = NULL;
-	find = SLTFind(plist, 1);
-	SLTEraseAfter(find);
-	SLTPrint(plist);
-	find = SLTFind(plist, 3);
-	SLTEraseAfter(find);
+	////≤‚ ‘∫Û…æ≥˝
+	//SLTNode* find = NULL;
+	//find = SLTFind(plist, 1);
+	//SLTEraseAfter(find);
+	//SLTPrint(plist);
+	//find = SLTFind(plist, 3);
+	//SLTEraseAfter(find);
+	//SLTPrint(plist);
+
+	//≤‚ ‘œ˙ªŸ
+	SListDestory(&plist);
 	SLTPrint(plist);
 }
 

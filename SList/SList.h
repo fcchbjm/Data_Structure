@@ -43,3 +43,8 @@ void SLTErase(SLTNode** pphead, SLTNode* pos);
 
 //删除pos之后的节点
 void SLTEraseAfter(SLTNode* pos);
+
+//链表的销毁
+void SListDestory(SLTNode** pphead);
+
+
