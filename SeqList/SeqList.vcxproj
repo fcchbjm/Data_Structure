@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\SList\SList.h" />
+    <ClInclude Include="..\SList\PhoneBook\Contact.h" />
+    <ClInclude Include="..\SList\PhoneBook\SList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\SList\SList.c" />
+    <ClCompile Include="..\SList\PhoneBook\Contact.c" />
+    <ClCompile Include="..\SList\PhoneBook\SList.c" />
     <ClCompile Include="..\SList\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

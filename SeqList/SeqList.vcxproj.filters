@@ -40,18 +40,33 @@
     <Filter Include="资源文件\SList">
       <UniqueIdentifier>{bd933637-9363-4d5f-a3e4-375afbbe7f12}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\SList\PhoneBook">
+      <UniqueIdentifier>{a77abf7c-17e0-463e-bf34-ece95a650fd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SList\PhoneBook">
+      <UniqueIdentifier>{95b469f4-93bd-4327-afa7-caabb07f0875}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\SList\PhoneBook">
+      <UniqueIdentifier>{b449a831-a247-4348-85f8-d945084782cb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\SList\SList.h">
-      <Filter>头文件\SList</Filter>
+    <ClInclude Include="..\SList\PhoneBook\SList.h">
+      <Filter>头文件\SList\PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SList\PhoneBook\Contact.h">
+      <Filter>头文件\SList\PhoneBook</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\SList\SList.c">
-      <Filter>源文件\SList</Filter>
+    <ClCompile Include="..\SList\PhoneBook\SList.c">
+      <Filter>源文件\SList\PhoneBook</Filter>
     </ClCompile>
     <ClCompile Include="..\SList\test.c">
-      <Filter>源文件\SList</Filter>
+      <Filter>源文件\SList\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SList\PhoneBook\Contact.c">
+      <Filter>源文件\SList\PhoneBook</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
