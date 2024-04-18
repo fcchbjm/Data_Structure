@@ -1,12 +1,10 @@
 #pragma once
 
-#include<stdio.h>
-#include<stdlib.h>
-#include<assert.h>
+#include "Contact.h"
 
 //定义节点的结构
 //数据 + 指向下一个节点的指针
-typedef int SLTDataType;
+typedef PeoInfo SLTDataType;
 
 typedef struct SListNode 
 {
@@ -45,6 +43,6 @@ void SLTErase(SLTNode** pphead, SLTNode* pos);
 void SLTEraseAfter(SLTNode* pos);
 
 //链表的销毁
-void SListDestory(SLTNode** pphead);
+void SListDestroy(SLTNode** pphead);
 
 

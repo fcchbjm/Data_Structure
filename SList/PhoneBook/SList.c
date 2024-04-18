@@ -50,6 +50,7 @@ void SLTPushBack(SLTNode** pphead, SLTDataType x)
 		ptail->next = newnode;
 	}
 }
+
 //头插
 void SLTPushFront(SLTNode** pphead, SLTDataType x)
 {
@@ -59,6 +60,7 @@ void SLTPushFront(SLTNode** pphead, SLTDataType x)
 	newnode->next = *pphead;
 	*pphead = newnode;
 }
+
 //尾删
 void SLTPopBack(SLTNode** pphead)
 {
@@ -86,6 +88,7 @@ void SLTPopBack(SLTNode** pphead)
 		prev->next = NULL;
 	}
 }
+
 //头删
 void SLTPopFront(SLTNode** pphead)
 {
@@ -96,20 +99,20 @@ void SLTPopFront(SLTNode** pphead)
 	*pphead = next;
 }
 
-//查找
-SLTNode* SLTFind(SLTNode* phead, SLTDataType x)
-{
-	SLTNode* pcur = phead;//防止需要对链表进行多次遍历
-	while (pcur)//等价于phead != NULL
-	{
-		if (pcur->data == x)
-		{
-			return pcur;//找到了，返回指针
-		}
-		pcur = pcur->next;
-	}
-	return NULL;//没找到的情况
-}
+////查找
+//SLTNode* SLTFind(SLTNode* phead, SLTDataType x)
+//{
+//	SLTNode* pcur = phead;//防止需要对链表进行多次遍历
+//	while (pcur)//等价于phead != NULL
+//	{
+//		if (pcur->data == x)
+//		{
+//			return pcur;//找到了，返回指针
+//		}
+//		pcur = pcur->next;
+//	}
+//	return NULL;//没找到的情况
+//}
 
 //在任意位置之前插入
 void SLTInsert(SLTNode** pphead, SLTNode* pos, SLTDataType x)
@@ -137,7 +140,6 @@ void SLTInsert(SLTNode** pphead, SLTNode* pos, SLTDataType x)
 		prev->next = newnode;//让前一个节点的指针指向新建的节点的地址
 	}
 }
-
 
 //在指定位置之后插入数据
 void SLTInsertAfter(SLTNode* pos, SLTDataType x)
@@ -192,7 +194,7 @@ void SLTEraseAfter(SLTNode* pos)
 }
 
 //链表的销毁
-void SListDestory(SLTNode** pphead)
+void SListDestroy(SLTNode** pphead)
 {
 	assert(pphead && *pphead);
 

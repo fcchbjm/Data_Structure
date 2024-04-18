@@ -19,11 +19,13 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\List\List.h" />
+    <ClInclude Include="..\SList\PhoneBook\Contact.h" />
+    <ClInclude Include="..\SList\PhoneBook\SList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\List\List.c" />
-    <ClCompile Include="..\List\test.c" />
+    <ClCompile Include="..\SList\PhoneBook\Contact.c" />
+    <ClCompile Include="..\SList\PhoneBook\SList.c" />
+    <ClCompile Include="..\SList\PhoneBook\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

@@ -60,16 +60,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\List\List.h">
-      <Filter>头文件\List</Filter>
+    <ClInclude Include="..\SList\PhoneBook\Contact.h">
+      <Filter>头文件\SList\PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="..\SList\PhoneBook\SList.h">
+      <Filter>头文件\SList\PhoneBook</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\List\List.c">
-      <Filter>源文件\List</Filter>
+    <ClCompile Include="..\SList\PhoneBook\Contact.c">
+      <Filter>源文件\SList\PhoneBook</Filter>
     </ClCompile>
-    <ClCompile Include="..\List\test.c">
-      <Filter>源文件\List</Filter>
+    <ClCompile Include="..\SList\PhoneBook\SList.c">
+      <Filter>源文件\SList\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="..\SList\PhoneBook\test.c">
+      <Filter>源文件\SList\PhoneBook</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -1,6 +1,8 @@
 #pragma once
 
-#include "SList.h"
+#include<stdio.h>
+#include<stdlib.h>
+#include<assert.h>
 
 #define NAME_MAX 100
 #define SEX_MAX 4
@@ -8,7 +10,7 @@
 #define ADDR_MAX 100
 
 //前置声明
-typedef struct SListNode contact;
+typedef struct SListNode Contact;
 
 //用户数据
 typedef struct PersonInfo
@@ -21,16 +23,16 @@ typedef struct PersonInfo
 }PeoInfo;
 
 //初始化通讯录
-void InitContact(contact** con);
+//void InitContact(Contact** con);
 //添加通讯录数据
-void AddContact(contact** con);
+void AddContact(Contact** con);
 //删除通讯录数据
-void DelContact(contact** con);
+void DelContact(Contact** con);
 //展示通讯录数据
-void ShowContact(contact* con);
+void ShowContact(Contact* con);
 //查找通讯录数据
-void FindContact(contact* con);
+void FindContact(Contact* con);
 //修改通讯录数据
-void ModifyContact(contact** con);
+void ModifyContact(Contact** con);
 //销毁通讯录数据
-void DestroyContact(contact** con);
+void DestroyContact(Contact** con);
