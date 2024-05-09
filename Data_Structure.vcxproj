@@ -19,13 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Stack\Stack.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Stack\Stack.c" />
-    <ClCompile Include="Stack\test.c" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
