@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34723.18
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SeqList", "SeqList\SeqList.vcxproj", "{D779C83B-DB1A-4B1B-AB35-41A724B3076E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Data_Structure", "Data_Structure.vcxproj", "{D779C83B-DB1A-4B1B-AB35-41A724B3076E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {D58F989F-6430-4ED2-92BE-3778E374104A}
+		SolutionGuid = {6F2AF8A8-0883-42DE-93A4-3B4C91A80436}
 	EndGlobalSection
 EndGlobal
