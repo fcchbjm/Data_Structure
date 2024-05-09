@@ -19,13 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\SList\PhoneBook\Contact.h" />
-    <ClInclude Include="..\SList\PhoneBook\SList.h" />
+    <ClInclude Include="Stack\Stack.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\SList\PhoneBook\Contact.c" />
-    <ClCompile Include="..\SList\PhoneBook\SList.c" />
-    <ClCompile Include="..\SList\PhoneBook\test.c" />
+    <ClCompile Include="Stack\Stack.c" />
+    <ClCompile Include="Stack\test.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

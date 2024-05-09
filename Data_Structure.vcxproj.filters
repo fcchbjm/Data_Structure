@@ -58,24 +58,41 @@
     <Filter Include="资源文件\List">
       <UniqueIdentifier>{6baa5f22-599a-47e4-ae92-e2f2a7318973}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Stack">
+      <UniqueIdentifier>{89c7cfb9-2096-4e8e-a8c1-23a99dcd2906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Stack">
+      <UniqueIdentifier>{5a27ef28-a47a-4622-b258-58b4e7c35ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\Stack">
+      <UniqueIdentifier>{afeeeb7e-665d-4d32-a99a-29772a61a563}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\Queue">
+      <UniqueIdentifier>{f4f1d386-c4c9-4694-b8f7-82f12e279e99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Queue">
+      <UniqueIdentifier>{86a72e39-26e2-4d0d-9efc-ed044a341680}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\Queue">
+      <UniqueIdentifier>{c503a4d1-88be-4c3e-90de-1424bbb9556f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\SList\PhoneBook\Contact.h">
-      <Filter>头文件\SList\PhoneBook</Filter>
-    </ClInclude>
-    <ClInclude Include="..\SList\PhoneBook\SList.h">
-      <Filter>头文件\SList\PhoneBook</Filter>
+    <ClInclude Include="Stack\Stack.h">
+      <Filter>头文件\Stack</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\SList\PhoneBook\Contact.c">
-      <Filter>源文件\SList\PhoneBook</Filter>
+    <ClCompile Include="Stack\Stack.c">
+      <Filter>源文件\Stack</Filter>
     </ClCompile>
-    <ClCompile Include="..\SList\PhoneBook\SList.c">
-      <Filter>源文件\SList\PhoneBook</Filter>
+    <ClCompile Include="Stack\test.c">
+      <Filter>源文件\Stack</Filter>
     </ClCompile>
-    <ClCompile Include="..\SList\PhoneBook\test.c">
-      <Filter>源文件\SList\PhoneBook</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>
