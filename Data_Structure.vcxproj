@@ -21,6 +21,13 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Queue\Queue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Queue\Queue.c" />
+    <ClCompile Include="Queue\test.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
