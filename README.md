@@ -7,12 +7,14 @@
 # SeqList 顺序表
 
 
+```C
 typedef struct SeqList
 {
 	SLDataType* arr;//数据
 	int size;//有效元素个数
 	int capacity;//空间大小
 }SL;
+```
 
 **顺序表基本结构**
 
@@ -48,11 +50,13 @@ typedef struct SeqList
 
 *不带头单项不循环链表*
 
+```C
 typedef struct SListNode 
 {
 	SLTDataType data;//数据
 	struct SListNode* next;//指向下一个链表地址的指针
 }SLTNode;
+```
 
 **单链表基本结构**
 
@@ -88,12 +92,14 @@ typedef struct SListNode
 
 *带头双向不循环链表*
 
+```C
 typedef struct ListNode
 {
 	LTDataType data;
 	struct ListNode* prev;//指向前一个节点
 	struct ListNode* next;//指向后一个节点
 }LTNode;
+```
 
 **双向链表基本结构**
 
