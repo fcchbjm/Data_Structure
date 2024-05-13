@@ -7,6 +7,13 @@
 # SeqList 顺序表
 
 
+typedef struct SeqList
+{
+	SLDataType* arr;//数据
+	int size;//有效元素个数
+	int capacity;//空间大小
+}SL;
+
 **顺序表基本结构**
 
 [SeqList.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/SeqList.c)
@@ -38,6 +45,14 @@
 
 # SList 单链表
 
+
+*不带头单项不循环链表**
+
+typedef struct SListNode 
+{
+	SLTDataType data;//数据
+	struct SListNode* next;//指向下一个链表地址的指针
+}SLTNode;
 
 **单链表基本结构**
 
@@ -71,6 +86,15 @@
 # List 双向链表
 
 
+*带头双向不循环链表*
+
+typedef struct ListNode
+{
+	LTDataType data;
+	struct ListNode* prev;//指向前一个节点
+	struct ListNode* next;//指向后一个节点
+}LTNode;
+
 **双向链表基本结构**
 
 [List.c](https://github.com/fcchbjm/Data_Structure/blob/master/List/List.c)
@@ -86,6 +110,8 @@
 # Stack 栈
 
 
+特点：后进先出 FILO（First In Last Out）
+
 **栈的基本结构**
 
 [Stack.h](https://github.com/fcchbjm/Data_Structure/blob/master/Stack/Stack.h)
@@ -97,6 +123,8 @@
 
 # Queue 队列
 
+
+特点：先进先出 FIFO（First in First Out）
 
 **队列的基本结构**
 
