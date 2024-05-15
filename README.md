@@ -7,6 +7,15 @@ Implement data structures in C
 
 # SeqList 顺序表
 
+*在物理上连续，在逻辑上也连续*
+
+优点：
+1.随机访问,即可在O(1)时间内找到第i个元素
+2.存储密度高,每个节点只存储数据元素本身
+
+缺点：
+1.拓展容量不方便
+2.插入、删除操作不方便,需要移动大量元素
 
 ```C
 typedef struct SeqList
@@ -89,17 +98,25 @@ typedef struct Student
 }Student;
 ```
 
-[Student.h]()
+[Student.h](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/StuManage/Student.h)
 
-[Student.c]()
+[Student.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/StuManage/Student.c)
 
-[test.c]()
+[test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/StuManage/test.c)
 
 
 # SList 单链表
 
 
 *不带头单项不循环链表*
+
+*在物理不连续，在逻辑上连续*
+
+优点：
+1.可在任意位置插入删除，时间复杂度为O(1)
+2.没有增容问题，一次仅开辟一个节点的空间
+
+缺点：不能随机访问
 
 ```C
 typedef struct SListNode 
@@ -165,6 +182,16 @@ typedef struct SListNode
 
 
 *带头双向不循环链表*
+
+*在物理不连续，在逻辑上连续*
+
+优点：
+1.插入、删除和查找操作效率高，适用于需要频繁进行查找操作的数据结构，如数据库索引、哈希表等
+2.可以找到前后节点，可进可退
+
+缺点：
+1.实现复杂，占用空间多
+2.增加删除节点复杂，需要多分配一个指针存储空间
 
 ```C
 typedef struct ListNode
