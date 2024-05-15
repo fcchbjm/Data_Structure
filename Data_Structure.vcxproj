@@ -23,10 +23,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Queue\Queue.h" />
+    <ClInclude Include="SeqList\StuManage\Student.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Queue\Queue.c" />
     <ClCompile Include="Queue\test.c" />
+    <ClCompile Include="SeqList\StuManage\Student.c" />
+    <ClCompile Include="SeqList\StuManage\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

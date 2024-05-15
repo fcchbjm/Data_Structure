@@ -16,9 +16,6 @@
     <Filter Include="头文件\SeqList">
       <UniqueIdentifier>{e900382e-d077-4213-ae6b-3487f053a0da}</UniqueIdentifier>
     </Filter>
-    <Filter Include="头文件\SeqList\PhoneBook">
-      <UniqueIdentifier>{ac78e802-5764-4cb7-9b55-6fc7ac5812a8}</UniqueIdentifier>
-    </Filter>
     <Filter Include="源文件\SeqList">
       <UniqueIdentifier>{cd95577d-5edd-4476-b6ee-928cc5c15fb3}</UniqueIdentifier>
     </Filter>
@@ -76,6 +73,18 @@
     <Filter Include="资源文件\Queue">
       <UniqueIdentifier>{c503a4d1-88be-4c3e-90de-1424bbb9556f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\SeqList\StuManage">
+      <UniqueIdentifier>{23e61bed-695b-4283-950b-4961b893f460}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="头文件\SeqList\PhoneBook">
+      <UniqueIdentifier>{ac78e802-5764-4cb7-9b55-6fc7ac5812a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\SeqList\StuManage">
+      <UniqueIdentifier>{86bf7700-cf55-4c59-82c3-bfbb51cf0f1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\SeqList\StuManage">
+      <UniqueIdentifier>{07bdc006-8428-41bf-84bd-0970d55edc16}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -86,6 +95,9 @@
     <ClInclude Include="Queue\Queue.h">
       <Filter>头文件\Queue</Filter>
     </ClInclude>
+    <ClInclude Include="SeqList\StuManage\Student.h">
+      <Filter>头文件\SeqList\StuManage</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Queue\Queue.c">
@@ -93,6 +105,12 @@
     </ClCompile>
     <ClCompile Include="Queue\test.c">
       <Filter>源文件\Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqList\StuManage\Student.c">
+      <Filter>源文件\SeqList\StuManage</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqList\StuManage\test.c">
+      <Filter>源文件\SeqList\StuManage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

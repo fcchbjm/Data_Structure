@@ -1,5 +1,6 @@
 # Data Structure 数据结构
 
+Implement data structures in C
 
 **本仓库我们在C语言的基础上简单的实现部分数据结构**
 
@@ -29,6 +30,32 @@ typedef struct SeqList
 
 **项目：通讯录**
 
+```C
+typedef struct PersonInfo//通讯录结构体
+{
+	char name[NAME_MAX];
+	char gender[GENDER_MAX];
+	int age;
+	char tel[TEL_MAX];
+	char addr[ADDR_MAX];
+}PeoInfo;
+
+//因为没有不会SL的头文件，使用声明+typedef
+typedef struct SeqList Contact;//对结构体SL进行重命名为Contact
+```
+
+```C
+typedef PeoInfo SLDataType;//将通讯录结构体类型重命名为SLDataType
+
+//动态顺序表
+typedef struct SeqList//将结构体SeqList重命名为SL
+{
+	SLDataType* arr;
+	int size;
+	int capacity;
+}SL;
+```
+
 [Contact.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/PhoneBook/Contact.c)
 ：基于顺序表实现的通讯录相关功能的函数体部分
 
@@ -43,6 +70,30 @@ typedef struct SeqList
 
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/PhoneBook/test.c)
 ：通讯录主函数和菜单部分，以及部分测试功能的测试代码
+
+**项目：学生成绩管理系统**
+
+```C
+typedef struct StudentInfo
+{
+    char ID[ID_MAX];
+    char Name[NAME_MAX];
+    int Score;
+}StudentInfo;
+
+typedef struct Student
+{
+    StudentInfo* ps;
+    int size;//有效数据个数
+    int capacity;//空间大小
+}Student;
+```
+
+[Student.h]()
+
+[Student.c]()
+
+[test.c]()
 
 
 # SList 单链表
@@ -70,6 +121,29 @@ typedef struct SListNode
 ：主函数和测试代码
 
 **项目：通讯录**
+
+```C
+typedef struct SListNode Contact;//前置声明
+
+typedef struct PersonInfo//用户数据
+{
+    char name[NAME_MAX];
+    char sex[SEX_MAX];
+    int age;
+    char tel[TEL_MAX];
+    char addr[ADDR_MAX];
+}PeoInfo;
+```
+```C
+//数据 + 指向下一个节点的指针
+typedef PeoInfo SLTDataType;//定义节点的结构
+
+typedef struct SListNode 
+{
+	SLTDataType data;//数据
+	struct SListNode* next;//指向下一个链表的地址
+}SLTNode;
+```
 
 [Contact.c](https://github.com/fcchbjm/Data_Structure/blob/master/SList/PhoneBook/Contact.c)
 ：基于单链表实现的通讯录相关功能的函数体部分
