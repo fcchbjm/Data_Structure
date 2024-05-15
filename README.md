@@ -99,10 +99,13 @@ typedef struct Student
 ```
 
 [Student.h](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/StuManage/Student.h)
+：基于顺序表实现的学生成绩管理系统的结构体和函数的声明
 
 [Student.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/StuManage/Student.c)
+：基于顺序表实现的学生成绩管理系统相关功能的函数体部分
 
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/StuManage/test.c)
+：学生成绩管理系统主函数部分
 
 
 # SList 单链表
@@ -222,10 +225,13 @@ typedef struct ListNode
 **栈的基本结构**
 
 [Stack.h](https://github.com/fcchbjm/Data_Structure/blob/master/Stack/Stack.h)
+：基于顺序表实现的栈的结构体和函数的声明
 
 [Stack.c](https://github.com/fcchbjm/Data_Structure/blob/master/Stack/Stack.c)
+：基于顺序表实现的栈相关功能的函数体部分
 
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/Stack/test.c)
+：主函数以及部分测试功能的测试代码
 
 
 # Queue 队列

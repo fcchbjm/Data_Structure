@@ -95,9 +95,6 @@
     <ClInclude Include="Queue\Queue.h">
       <Filter>头文件\Queue</Filter>
     </ClInclude>
-    <ClInclude Include="SeqList\StuManage\Student.h">
-      <Filter>头文件\SeqList\StuManage</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Queue\Queue.c">
@@ -105,12 +102,6 @@
     </ClCompile>
     <ClCompile Include="Queue\test.c">
       <Filter>源文件\Queue</Filter>
-    </ClCompile>
-    <ClCompile Include="SeqList\StuManage\Student.c">
-      <Filter>源文件\SeqList\StuManage</Filter>
-    </ClCompile>
-    <ClCompile Include="SeqList\StuManage\test.c">
-      <Filter>源文件\SeqList\StuManage</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
