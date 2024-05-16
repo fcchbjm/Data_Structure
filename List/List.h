@@ -43,4 +43,4 @@ LTNode* LTFind(LTNode* phead, LTDataType x);
 void LTErase(LTNode* pos);
 
 //Ïú»Ù
-void LTDestory(LTNode* phead);
+void LTDestroy(LTNode* phead);

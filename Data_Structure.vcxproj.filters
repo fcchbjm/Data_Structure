@@ -109,7 +109,7 @@
     <ClCompile Include="Heap\Heap.c">
       <Filter>源文件\Heap</Filter>
     </ClCompile>
-    <ClCompile Include="Heap\teat.c">
+    <ClCompile Include="Heap\test.c">
       <Filter>源文件\Heap</Filter>
     </ClCompile>
   </ItemGroup>

@@ -24,7 +24,7 @@ typedef struct SeqList
 //顺序表的初始化
 void SLInit(SL* ps);
 //顺序表的销毁
-void SLDestory(SL* ps);
+void SLDestroy(SL* ps);
 //头部插入数据
 void SLPushFront(SL* ps, SLDataType x);
 //尾部插入数据

@@ -26,7 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Heap\Heap.c" />
-    <ClCompile Include="Heap\teat.c" />
+    <ClCompile Include="Heap\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

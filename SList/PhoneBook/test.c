@@ -127,7 +127,7 @@
 //	//SLTPrint(plist);
 //
 //	//²âÊÔÏú»Ù
-//	SListDestory(&plist);
+//	SListDestroy(&plist);
 //	SLTPrint(plist);
 //}
 

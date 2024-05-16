@@ -10,7 +10,7 @@ void ContactInit(Contact* con)
 }
 
 //通讯录的销毁
-void ContactDestory(Contact* con)
+void ContactDestroy(Contact* con)
 {
 	//SaveContact(con);//在销毁退出前保存数据
 	SLDestory(con);

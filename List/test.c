@@ -69,7 +69,7 @@ void ListTest01()
 	//find = NULL;
 	//LTPrint(plist);
 
-	LTDestory(plist);
+	LTDestroy(plist);
 	plist = NULL;
 }
 

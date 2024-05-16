@@ -25,7 +25,7 @@ typedef struct SeqList Contact;
 //通讯录的初始化
 void ContactInit(Contact* con);
 //通讯录的销毁
-void ContactDestory(Contact* con);
+void ContactDestroy(Contact* con);
 //通讯录添加数据
 void ContactAdd(Contact* con);
 //通讯录删除数据

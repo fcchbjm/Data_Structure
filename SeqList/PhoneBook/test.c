@@ -23,7 +23,7 @@
 //	SLPopBack(&sl);
 //	SLPrint(sl);
 //
-//	SLDestory(&sl);
+//	SLDestroy(&sl);
 //}
 
 //void SLtest2()
@@ -50,7 +50,7 @@
 //	ret = SLFind(&sl, 11);
 //	printf("ret=%d\n", ret);
 //
-//	SLDestory(&sl);
+//	SLDestroy(&sl);
 //}
 
 //void ContactTest01()
@@ -70,7 +70,7 @@
 //
 //	ContactFind(&con);
 //
-//	ContactDestory(&con);//通讯录的销毁
+//	ContactDestroy(&con);//通讯录的销毁
 //}
 
 //int main()
@@ -143,6 +143,6 @@ int main()
 			break;
 		}
 	} while (input);
-	ContactDestory(&con);
+	ContactDestroy(&con);
 	return 0;
 }

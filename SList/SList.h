@@ -45,6 +45,6 @@ void SLTErase(SLTNode** pphead, SLTNode* pos);
 void SLTEraseAfter(SLTNode* pos);
 
 //Á´±íµÄÏú»Ù
-void SListDestory(SLTNode** pphead);
+void SListDestroy(SLTNode** pphead);
 
 

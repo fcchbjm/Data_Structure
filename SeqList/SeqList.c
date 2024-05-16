@@ -7,7 +7,7 @@ void SLInit(SL* ps)
 	ps->capacity = 0;
 }
 
-void SLDestory(SL* ps)
+void SLDestroy(SL* ps)
 {
 	if (ps->arr)
 	{

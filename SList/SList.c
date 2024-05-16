@@ -192,7 +192,7 @@ void SLTEraseAfter(SLTNode* pos)
 }
 
 //Á´±íµÄÏú»Ù
-void SListDestory(SLTNode** pphead)
+void SListDestroy(SLTNode** pphead)
 {
 	assert(pphead && *pphead);
 

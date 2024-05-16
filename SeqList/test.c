@@ -23,7 +23,7 @@ void SLtest(void)
 	SLPopBack(&sl);//尾删
 	SLPrint(sl);
 
-	SLDestory(&sl);//销毁
+	SLDestroy(&sl);//销毁
 }
 
 void SLtest2()
@@ -50,7 +50,7 @@ void SLtest2()
 	ret = SLFind(&sl, 11);//查找11这个元素
 	printf("ret=%d\n", ret);
 
-	SLDestory(&sl);//销毁
+	SLDestroy(&sl);//销毁
 }
 
 int main()

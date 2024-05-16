@@ -118,7 +118,7 @@ void LTErase(LTNode* pos)
 	pos = NULL;
 }
 
-void LTDestory(LTNode* phead)
+void LTDestroy(LTNode* phead)
 {
 	assert(phead);
 
