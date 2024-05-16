@@ -193,13 +193,13 @@ void DisplayStudentByScore(Student* stu)//显示学生成绩排名
 			//count++;
 			printf(" %-7d %-20s %-24s %-6d %s\n", i + 1, stu->ps[i].ID, stu->ps[i].Name, stu->ps[i].Score, "及格");
 			//totalScore += stu->ps[i].Score;
+			passCount++;
 		}
 		else
 		{
 			//count++;
 			printf(" %-7d %-20s %-24s %-6d %s\n", i + 1, stu->ps[i].ID, stu->ps[i].Name, stu->ps[i].Score, "不及格");
 			//totalScore += stu->ps[i].Score;
-			passCount++;
 		}
 	}
 	minScore = stu->ps[stu->size - 1].Score;
