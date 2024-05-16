@@ -85,6 +85,15 @@
     <Filter Include="资源文件\SeqList\StuManage">
       <UniqueIdentifier>{07bdc006-8428-41bf-84bd-0970d55edc16}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Heap">
+      <UniqueIdentifier>{fd4b5564-b9a2-4fb4-ba51-20672dfd9787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Heap">
+      <UniqueIdentifier>{7bf04554-369f-41d0-863e-f9c4f34fa954}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\Heap">
+      <UniqueIdentifier>{50b2d1d8-4961-4d6c-a8b2-afbe86fc91c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -92,16 +101,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Queue\Queue.h">
-      <Filter>头文件\Queue</Filter>
+    <ClInclude Include="Heap\Heap.h">
+      <Filter>头文件\Heap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Queue\Queue.c">
-      <Filter>源文件\Queue</Filter>
+    <ClCompile Include="Heap\Heap.c">
+      <Filter>源文件\Heap</Filter>
     </ClCompile>
-    <ClCompile Include="Queue\test.c">
-      <Filter>源文件\Queue</Filter>
+    <ClCompile Include="Heap\teat.c">
+      <Filter>源文件\Heap</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -22,11 +22,11 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Queue\Queue.h" />
+    <ClInclude Include="Heap\Heap.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Queue\Queue.c" />
-    <ClCompile Include="Queue\test.c" />
+    <ClCompile Include="Heap\Heap.c" />
+    <ClCompile Include="Heap\teat.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
