@@ -22,11 +22,11 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heap\Heap.h" />
+    <ClInclude Include="SeqList\SeqList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heap\Heap.c" />
-    <ClCompile Include="Heap\test.c" />
+    <ClCompile Include="SeqList\SeqList.c" />
+    <ClCompile Include="SeqList\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

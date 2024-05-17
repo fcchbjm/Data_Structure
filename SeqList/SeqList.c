@@ -2,6 +2,7 @@
 
 void SLInit(SL* ps)
 {
+	assert(ps);
 	ps->arr = NULL;
 	ps->size = 0;
 	ps->capacity = 0;
@@ -9,6 +10,7 @@ void SLInit(SL* ps)
 
 void SLDestroy(SL* ps)
 {
+	assert(ps);
 	if (ps->arr)
 	{
 		free(ps->arr);
@@ -20,6 +22,7 @@ void SLDestroy(SL* ps)
 
 void SLCheckCapacity(SL* ps)
 {
+	assert(ps);
 	//在插入数据前先判断空间够不够
 	if (ps->size == ps->capacity)
 	{
@@ -147,5 +150,5 @@ int SLFind(SL* ps, SLDataType x)
 			return i;
 		}
 	}
-	return -1;
+	return EOF;
 }

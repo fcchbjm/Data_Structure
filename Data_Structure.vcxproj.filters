@@ -101,16 +101,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heap\Heap.h">
-      <Filter>头文件\Heap</Filter>
+    <ClInclude Include="SeqList\SeqList.h">
+      <Filter>头文件\SeqList</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heap\Heap.c">
-      <Filter>源文件\Heap</Filter>
+    <ClCompile Include="SeqList\SeqList.c">
+      <Filter>源文件\SeqList</Filter>
     </ClCompile>
-    <ClCompile Include="Heap\test.c">
-      <Filter>源文件\Heap</Filter>
+    <ClCompile Include="SeqList\test.c">
+      <Filter>源文件\SeqList</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
