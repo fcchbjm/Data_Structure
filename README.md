@@ -5,6 +5,8 @@ Implement data structures in C
 **本仓库我们在C语言的基础上简单的实现部分数据结构**
 
 
+---
+
 # SeqList 顺序表
 
 *在物理上连续，在逻辑上也连续*
@@ -108,6 +110,8 @@ typedef struct Student
 ：学生成绩管理系统主函数部分
 
 
+---
+
 # SList 单链表
 
 
@@ -181,6 +185,8 @@ typedef struct SListNode
 ：通讯录主函数和菜单部分，以及部分测试功能的测试代码
 
 
+---
+
 # List 双向链表
 
 
@@ -217,6 +223,8 @@ typedef struct ListNode
 ：主函数和测试代码
 
 
+---
+
 # Stack 栈
 
 
@@ -234,6 +242,8 @@ typedef struct ListNode
 ：主函数以及部分测试功能的测试代码
 
 
+---
+
 # Queue 队列
 
 
@@ -247,6 +257,8 @@ typedef struct ListNode
 
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/Queue/test.c)
 
+
+---
 
 # Heap 堆
 

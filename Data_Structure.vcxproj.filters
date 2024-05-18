@@ -100,17 +100,4 @@
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="SeqList\SeqList.h">
-      <Filter>头文件\SeqList</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="SeqList\SeqList.c">
-      <Filter>源文件\SeqList</Filter>
-    </ClCompile>
-    <ClCompile Include="SeqList\test.c">
-      <Filter>源文件\SeqList</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
