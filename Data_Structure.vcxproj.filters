@@ -100,4 +100,17 @@
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Heap\Heap.h">
+      <Filter>头文件\Heap</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Heap\Heap.c">
+      <Filter>源文件\Heap</Filter>
+    </ClCompile>
+    <ClCompile Include="Heap\test.c">
+      <Filter>源文件\Heap</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

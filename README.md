@@ -263,3 +263,4 @@ typedef struct ListNode
 # Heap 堆
 
 
+*物理结构上为数组，逻辑结构上为完全二叉树*
