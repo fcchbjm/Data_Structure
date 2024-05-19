@@ -26,10 +26,17 @@ void HeapSort(HPDataType* a, int n)
 	//建堆
 	//降序 -- 建小堆
 	//升序 -- 建大堆
-	for (int i = 1; i < n; i++)
+
+	//for (int i = 1; i < n; i++)
+	//{
+	//	AdjustUp(a, i);
+	//}
+
+	for (int i = (n - 1 - 1) / 2; i >= 0; i--)
 	{
-		AdjustUp(a, i);
+		AdjustDown(a, n, i);
 	}
+
 	int end = n - 1;
 	while (end > 0)
 	{
