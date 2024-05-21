@@ -20,13 +20,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
+    <None Include="SeqList\PhoneBook\Contact.dat" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heap\Heap.h" />
+    <ClInclude Include="SeqList\PhoneBook\Contact.h" />
+    <ClInclude Include="SeqList\PhoneBook\SeqList.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heap\Heap.c" />
-    <ClCompile Include="Heap\test.c" />
+    <ClCompile Include="SeqList\PhoneBook\Contact.c" />
+    <ClCompile Include="SeqList\PhoneBook\SeqList.c" />
+    <ClCompile Include="SeqList\PhoneBook\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

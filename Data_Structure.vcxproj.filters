@@ -94,23 +94,41 @@
     <Filter Include="资源文件\Heap">
       <UniqueIdentifier>{50b2d1d8-4961-4d6c-a8b2-afbe86fc91c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\BinaryTree">
+      <UniqueIdentifier>{f94d65a0-a69b-4d97-8df6-0c1d81ce6dd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\BinaryTree">
+      <UniqueIdentifier>{706833db-f31a-4bad-8f69-09e9a05e6fa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\BinaryTree">
+      <UniqueIdentifier>{934deed4-4871-4cc2-8c2a-8f79a783ba5e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="SeqList\PhoneBook\Contact.dat">
+      <Filter>资源文件\SeqList\PhoneBook</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heap\Heap.h">
-      <Filter>头文件\Heap</Filter>
+    <ClInclude Include="SeqList\PhoneBook\Contact.h">
+      <Filter>头文件\SeqList\PhoneBook</Filter>
+    </ClInclude>
+    <ClInclude Include="SeqList\PhoneBook\SeqList.h">
+      <Filter>头文件\SeqList\PhoneBook</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heap\Heap.c">
-      <Filter>源文件\Heap</Filter>
+    <ClCompile Include="SeqList\PhoneBook\Contact.c">
+      <Filter>源文件\SeqList\PhoneBook</Filter>
     </ClCompile>
-    <ClCompile Include="Heap\test.c">
-      <Filter>源文件\Heap</Filter>
+    <ClCompile Include="SeqList\PhoneBook\SeqList.c">
+      <Filter>源文件\SeqList\PhoneBook</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqList\PhoneBook\test.c">
+      <Filter>源文件\SeqList\PhoneBook</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
