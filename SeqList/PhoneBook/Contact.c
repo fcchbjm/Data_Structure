@@ -13,7 +13,7 @@ void ContactInit(Contact* con)
 void ContactDestroy(Contact* con)
 {
 	//SaveContact(con);//在销毁退出前保存数据
-	SLDestory(con);
+	SLDestroy(con);
 }
 
 //通讯录添加数据
