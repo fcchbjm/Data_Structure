@@ -7,7 +7,7 @@ Implement data structures in C
 
 ---
 
-# SeqList 顺序表
+## SeqList 顺序表
 
 *在物理上连续，在逻辑上也连续*
 
@@ -28,7 +28,7 @@ typedef struct SeqList
 }SL;
 ```
 
-**顺序表基本结构**
+### 顺序表基本结构
 
 [SeqList.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/SeqList.c)
 ：包含顺序表的结构体部分和函数的声明
@@ -39,7 +39,7 @@ typedef struct SeqList
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/test.c)
 ：主函数和测试代码
 
-**项目：通讯录**
+### 项目：通讯录
 
 ```C
 typedef struct PersonInfo//通讯录结构体
@@ -82,7 +82,7 @@ typedef struct SeqList//将结构体SeqList重命名为SL
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/PhoneBook/test.c)
 ：通讯录主函数和菜单部分，以及部分测试功能的测试代码
 
-**项目：学生成绩管理系统**
+### 项目：学生成绩管理系统
 
 ```C
 typedef struct StudentInfo
@@ -112,7 +112,7 @@ typedef struct Student
 
 ---
 
-# SList 单链表
+## SList 单链表
 
 
 *不带头单项不循环链表*
@@ -133,7 +133,7 @@ typedef struct SListNode
 }SLTNode;
 ```
 
-**单链表基本结构**
+### 单链表基本结构
 
 [SList.c](https://github.com/fcchbjm/Data_Structure/blob/master/SList/SList.c)
 ：包含单链表的结构体部分和函数的声明
@@ -144,7 +144,7 @@ typedef struct SListNode
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SList/test.c)
 ：主函数和测试代码
 
-**项目：通讯录**
+### 项目：通讯录
 
 ```C
 typedef struct SListNode Contact;//前置声明
@@ -187,7 +187,7 @@ typedef struct SListNode
 
 ---
 
-# List 双向链表
+## List 双向链表
 
 
 *带头双向不循环链表*
@@ -211,7 +211,7 @@ typedef struct ListNode
 }LTNode;
 ```
 
-**双向链表基本结构**
+### 双向链表基本结构
 
 [List.c](https://github.com/fcchbjm/Data_Structure/blob/master/List/List.c)
 ：包含双向链表的结构体部分和函数的声明
@@ -225,12 +225,12 @@ typedef struct ListNode
 
 ---
 
-# Stack 栈
+## Stack 栈
 
 
 特点：后进先出 FILO（First In Last Out）
 
-**栈的基本结构**
+### 栈的基本结构
 
 [Stack.h](https://github.com/fcchbjm/Data_Structure/blob/master/Stack/Stack.h)
 ：基于顺序表实现的栈的结构体和函数的声明
@@ -244,12 +244,12 @@ typedef struct ListNode
 
 ---
 
-# Queue 队列
+## Queue 队列
 
 
 特点：先进先出 FIFO（First in First Out）
 
-**队列的基本结构**
+### 队列的基本结构
 
 [Queue.h](https://github.com/fcchbjm/Data_Structure/blob/master/Queue/Queue.h)
 
@@ -260,7 +260,7 @@ typedef struct ListNode
 
 ---
 
-# Heap 堆
+## Heap 堆
 
 
 *物理结构上为数组，逻辑结构上为完全二叉树*
@@ -268,7 +268,7 @@ typedef struct ListNode
 
 ---
 
-# BinaryTree 二叉树
+## BinaryTree 二叉树
 
 
 
