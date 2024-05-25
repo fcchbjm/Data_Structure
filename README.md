@@ -30,10 +30,10 @@ typedef struct SeqList
 
 ### 顺序表基本结构
 
-[SeqList.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/SeqList.c)
+[SeqList.h](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/SeqList.h)
 ：包含顺序表的结构体部分和函数的声明
 
-[SeqList.h](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/SeqList.h)
+[SeqList.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/SeqList.c)
 ：对顺序表进行相关操作的函数体部分
 
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/SeqList/test.c)
