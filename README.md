@@ -230,6 +230,17 @@ typedef struct ListNode
 
 特点：后进先出 FILO（First In Last Out）
 
+```C
+typedef int STDataType;
+
+typedef struct Stack
+{
+	STDataType* a;
+	int top;
+	int capacity;
+}ST;
+```
+
 ### 栈的基本结构
 
 [Stack.h](https://github.com/fcchbjm/Data_Structure/blob/master/Stack/Stack.h)
@@ -249,13 +260,33 @@ typedef struct ListNode
 
 特点：先进先出 FIFO（First in First Out）
 
+```C
+typedef int QDataType;
+
+typedef struct QueueNode
+{
+	struct QueueNode* next;
+	QDataType val;
+}QNode;
+
+typedef struct Queue
+{
+	QNode* phead; 
+	QNode* ptail;
+	int size;
+}Queue;
+```
+
 ### 队列的基本结构
 
 [Queue.h](https://github.com/fcchbjm/Data_Structure/blob/master/Queue/Queue.h)
+：基于双向链表实现的队列的结构体和函数的声明
 
 [Queue.c](https://github.com/fcchbjm/Data_Structure/blob/master/Queue/Queue.c)
+：基于双向链表实现的队列相关功能的函数体部分
 
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/Queue/test.c)
+：主函数以及部分测试功能的测试代码
 
 
 ---
