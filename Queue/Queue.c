@@ -42,7 +42,7 @@ void QueuePop(Queue* pq)
 	free(pq->phead);
 	pq->phead = next;
 
-	if (pq->phead == NULL)//just one node
+	if (pq->phead == NULL)//只有一个节点的情况
 	{
 		pq->ptail = NULL;
 	}
