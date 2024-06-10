@@ -109,4 +109,9 @@
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Queue\Queue.c">
+      <Filter>源文件\Queue</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
