@@ -12,9 +12,11 @@ void TestHeap01()
 		HPPush(&hp, a[i]);
 	}
 
+	int i = 0;
 	while (!HPEmpty(&hp))
 	{
-		printf("%d ", HPTop(&hp));
+		//printf("%d ", HPTop(&hp));
+		a[i++] = HPTop(&hp);
 		HPPop(&hp);
 	}
 

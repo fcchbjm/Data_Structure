@@ -30,7 +30,7 @@ HPDataType HPTop(HP* php);
 //判空
 _Bool HPEmpty(HP* php);
 
-//向上调整
+//堆底元素向上调整
 void AdjustUp(HPDataType* a, int child);
 
 //堆顶元素向下调整
