@@ -34,11 +34,13 @@ void HeapSort(HPDataType* a, int n)
 	//	AdjustUp(a, i);
 	//}
 
+	//½¨¶Ñ
 	for (int i = (n - 1 - 1) / 2; i >= 0; i--)
 	{
 		AdjustDown(a, n, i);
 	}
 
+	//ÅÅÐò
 	int end = n - 1;
 	while (end > 0)
 	{
@@ -60,6 +62,7 @@ void TestHeap02()
 	{
 		printf("%d ", a[i]);
 	}
+	printf("\n");
 
 }
 

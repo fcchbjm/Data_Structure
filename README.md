@@ -296,6 +296,27 @@ typedef struct Queue
 
 *物理结构上为数组，逻辑结构上为完全二叉树*
 
+```C
+typedef int HPDataType;
+
+typedef struct Heap
+{
+	HPDataType* a;
+	int size;
+	int capacity;
+}HP;
+```
+
+### 堆的基本结构
+
+[Heap.h](https://github.com/fcchbjm/Data_Structure/blob/master/Heap/Heap.h)
+：基于顺序表和二叉树实现的堆的结构体和函数的声明
+
+[Heap.c](https://github.com/fcchbjm/Data_Structure/blob/master/Heap/Heap.c)
+：基于顺序表和二叉树实现的堆相关功能的函数体部分
+
+[test.c](https://github.com/fcchbjm/Data_Structure/blob/master/Heap/test.c)
+：主函数以及部分测试功能的测试代码以及堆排序算法
 
 ---
 
