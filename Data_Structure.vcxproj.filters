@@ -110,16 +110,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heap\Heap.h">
-      <Filter>头文件\Heap</Filter>
-    </ClInclude>
+    <ClCompile Include="BinaryTree\BinaryTree.c">
+      <Filter>源文件\BinaryTree</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryTree\test.c">
+      <Filter>源文件\BinaryTree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heap\Heap.c">
-      <Filter>源文件\Heap</Filter>
-    </ClCompile>
-    <ClCompile Include="Heap\test.c">
-      <Filter>源文件\Heap</Filter>
-    </ClCompile>
+    <ClInclude Include="BinaryTree\BinaryTree.h">
+      <Filter>头文件\BinaryTree</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

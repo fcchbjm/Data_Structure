@@ -22,11 +22,11 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Heap\Heap.h" />
+    <ClCompile Include="BinaryTree\BinaryTree.c" />
+    <ClCompile Include="BinaryTree\test.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Heap\Heap.c" />
-    <ClCompile Include="Heap\test.c" />
+    <ClInclude Include="BinaryTree\BinaryTree.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
