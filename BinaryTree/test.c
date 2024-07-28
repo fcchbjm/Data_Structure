@@ -36,7 +36,7 @@ void PrevOrder(BTNode* root)//前序遍历
 {
 	if (root == NULL)
 	{
-		printf("NULL\n");
+		printf("NULL ");
 		return;
 	}
 
@@ -45,10 +45,28 @@ void PrevOrder(BTNode* root)//前序遍历
 	PrevOrder(root->right);
 }
 
+void InOrder(BTNode* root)//中序遍历
+{
+	if (root == NULL)
+	{
+		printf("NULL ");
+		return;
+	}
+
+	InOrder(root->left);
+	printf("%d ", root->data);
+	InOrder(root->right);
+}
+
 int main()
 {
 	BTNode* root = CreatBinaryTree();
+
 	PrevOrder(root);
+	printf("\n");
+
+	InOrder(root);
+	printf("\n");
 
 	return 0;
 }
