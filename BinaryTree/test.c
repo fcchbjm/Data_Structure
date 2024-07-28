@@ -32,41 +32,51 @@ BTNode* CreatBinaryTree()
 	return node1;
 }
 
-void PrevOrder(BTNode* root)//前序遍历
+//int TreeHeight(BTNode* root)
+//{
+//	if (root == NULL)
+//		return 0;
+//
+//	return TreeHeight(root->left) > TreeHeight(root->right) ? \
+//		TreeHeight(root->left) + 1 : TreeHeight(root->right) + 1;
+//}
+
+int TreeHeight(BTNode* root)
 {
 	if (root == NULL)
-	{
-		printf("NULL ");
-		return;
-	}
+		return 0;
 
-	printf("%d ", root->data);
-	PrevOrder(root->left);
-	PrevOrder(root->right);
-}
+	int leftHeight = TreeHeight(root->left);
+	int rightHeight = TreeHeight(root->right);
 
-void InOrder(BTNode* root)//中序遍历
-{
-	if (root == NULL)
-	{
-		printf("NULL ");
-		return;
-	}
-
-	InOrder(root->left);
-	printf("%d ", root->data);
-	InOrder(root->right);
+	return leftHeight > rightHeight ? \
+		leftHeight + 1 : rightHeight + 1;
+	//return fmax(TreeHeight(root->left), TreeHeight(root->right));
 }
 
 int main()
 {
 	BTNode* root = CreatBinaryTree();
 
-	PrevOrder(root);
+	BinaryTreePrevOrder(root);
 	printf("\n");
 
-	InOrder(root);
+	BinaryTreeInOrder(root);
 	printf("\n");
+
+	BinaryTreePostOrder(root);
+	printf("\n");
+
+	printf("BinaryTreeSize:%d\n", BinaryTreeSize(root));
+	printf("BinaryTreeSize:%d\n", BinaryTreeSize(root));
+
+	printf("BinaryTreeLeafSize:%d\n", BinaryTreeLeafSize(root));
+
+	printf("TreeHeight:%d\n", TreeHeight(root));
+
+	printf("BinaryTreeLevelKSize(root , 1):%d\n", BinaryTreeLevelKSize(root, 1));
+	printf("BinaryTreeLevelKSize(root , 2):%d\n", BinaryTreeLevelKSize(root, 2));
+	printf("BinaryTreeLevelKSize(root , 3):%d\n", BinaryTreeLevelKSize(root, 3));
 
 	return 0;
 }
