@@ -77,6 +77,7 @@ int main()
 	printf("BinaryTreeLevelKSize(root , 1):%d\n", BinaryTreeLevelKSize(root, 1));
 	printf("BinaryTreeLevelKSize(root , 2):%d\n", BinaryTreeLevelKSize(root, 2));
 	printf("BinaryTreeLevelKSize(root , 3):%d\n", BinaryTreeLevelKSize(root, 3));
+	printf("BinaryTreeLevelKSize(root , 4):%d\n", BinaryTreeLevelKSize(root, 4));
 
 	return 0;
 }

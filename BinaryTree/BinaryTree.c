@@ -22,7 +22,7 @@ int BinaryTreeLevelKSize(BTNode* root, int k)
 	if (root != NULL && k == 1)
 		return 1;
 	if (root != NULL && k > 1)
-		return BinaryTreeLevelKSize(root->left, --k) + BinaryTreeLevelKSize(root->right, --k);
+		return BinaryTreeLevelKSize(root->left, k - 1) + BinaryTreeLevelKSize(root->right, k - 1);
 }
 
 void BinaryTreePrevOrder(BTNode* root)//Ç°Ğò±éÀú
