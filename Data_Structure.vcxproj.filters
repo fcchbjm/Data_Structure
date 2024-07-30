@@ -116,10 +116,16 @@
     <ClCompile Include="BinaryTree\test.c">
       <Filter>源文件\BinaryTree</Filter>
     </ClCompile>
+    <ClCompile Include="BinaryTree\Queue.c">
+      <Filter>源文件\Queue</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree\BinaryTree.h">
       <Filter>头文件\BinaryTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryTree\Queue.h">
+      <Filter>头文件\Queue</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

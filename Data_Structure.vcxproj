@@ -23,10 +23,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="BinaryTree\BinaryTree.c" />
+    <ClCompile Include="BinaryTree\Queue.c" />
     <ClCompile Include="BinaryTree\test.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BinaryTree\BinaryTree.h" />
+    <ClInclude Include="BinaryTree\Queue.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

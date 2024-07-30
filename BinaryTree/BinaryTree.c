@@ -25,6 +25,17 @@ BTNode* BinaryTreeCreate(BTDataType* arr, int num, int* pi)
 	return root;
 }
 
+void BinaryTreeDestory(BTNode** root)
+{
+	if (*root == NULL)
+		return;
+	BinaryTreeDestory(&((*root)->left));
+	BinaryTreeDestory(&((*root)->right));
+
+	free(*root);
+	*root = NULL;
+}
+
 int BinaryTreeSize(BTNode* root)//节点个数
 {
 	return root == NULL ? 0 : \
@@ -107,4 +118,60 @@ void BinaryTreePostOrder(BTNode* root)//后序遍历
 	BinaryTreePostOrder(root->left);
 	BinaryTreePostOrder(root->right);
 	printf("%d ", root->data);
+}
+
+#include "Queue.h"
+
+void BinaryTreeLevelOrder(BTNode* root)
+{
+	Queue Q;
+	QueueInit(&Q);
+	if (root)
+		QueuePush(&Q, root);
+	
+	while (!QueueEmpty(&Q))
+	{
+		BTNode* front = QueueFront(&Q);
+		QueuePop(&Q);
+		printf("%d ", front->data);
+		if (front->left)
+			QueuePush(&Q, front->left);
+		if (front->right)
+			QueuePush(&Q, front->right);
+	}
+}
+
+bool BinaryTreeComplete(BTNode* root)
+{
+	Queue Q;
+	QueueInit(&Q);
+	if (root)
+		QueuePush(&Q, root);
+
+	while (!QueueEmpty(&Q))
+	{
+		BTNode* front = QueueFront(&Q);
+		QueuePop(&Q);
+		//遇到第一个空，开始判断
+		if (front == NULL)
+		{
+			break;
+		}
+		QueuePush(&Q, front->left);
+		QueuePush(&Q, front->right);
+	}
+
+	while (!QueueEmpty(&Q))
+	{
+		BTNode* front = QueueFront(&Q);
+		QueuePop(&Q);
+		//如果有非空，就不是完全二叉树
+		if (front)
+		{
+			QueueDestroy(&Q);
+			return false;
+		}
+	}
+	QueueDestroy(&Q);
+	return true;
 }

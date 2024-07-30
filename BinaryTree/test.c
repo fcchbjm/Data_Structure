@@ -1,4 +1,5 @@
 #define _CRT_SECURE_NO_WARNINGS 1
+#include "vld.h"
 #include "BinaryTree.h"
 
 BTNode* BuyNode(BTDataType x)
@@ -91,7 +92,7 @@ void BTTest01()
 
 void BTTest02()
 {
-	int arr[100] = { 0 };
+	char arr[100] = { 0 };
 	scanf("%s", arr);
 	size_t sz = sizeof(arr) / sizeof(arr[0]);
 	int i = 0;
@@ -99,10 +100,42 @@ void BTTest02()
 	BinaryTreeInOrder(root);
 	printf("\n");
 
+	BinaryTreeDestory(&root);
+	printf("%p\n", root);
+}
+
+BTNode* CreatBinaryTree02()//ÍêÈ«¶þ²æÊ÷
+{
+	BTNode* node1 = BuyNode(1);
+	BTNode* node2 = BuyNode(2);
+	BTNode* node3 = BuyNode(3);
+	BTNode* node4 = BuyNode(4);
+	BTNode* node5 = BuyNode(5);
+	BTNode* node6 = BuyNode(6);
+
+	node1->left = node2;
+	node1->right = node4;
+	node2->left = node3;
+	node2->right = node5;
+	node4->left = node6;
+
+	return node1;
+}
+
+void BTTest03()
+{
+	BTNode* root = CreatBinaryTree02();
+
+	BinaryTreeLevelOrder(root);
+	printf("\n");
+
+	printf("BinaryTreeComplete:%d\n", BinaryTreeComplete(root));
+
+	BinaryTreeDestory(&root);
 }
 
 int main()
 {
-	BTTest02();
+	BTTest03();
 	return 0;
 }
