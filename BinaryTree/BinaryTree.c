@@ -1,5 +1,30 @@
 #include "BinaryTree.h"
 
+BTNode* BinaryTreeCreate(BTDataType* arr, int num, int* pi)
+{
+	if (*pi >= num)
+	{
+		return NULL;
+	}
+	if (arr[*pi] == '#')
+	{
+		(*pi)++;
+		return NULL;
+	}
+
+	BTNode* root = malloc(sizeof(BTNode));
+	if (root == NULL)
+	{
+		perror("malloc failed");
+		return NULL;
+	}
+	root->data = arr[(*pi)++];
+	root->left = BinaryTreeCreate(arr, num, pi);
+	root->right = BinaryTreeCreate(arr, num, pi);
+
+	return root;
+}
+
 int BinaryTreeSize(BTNode* root)//节点个数
 {
 	return root == NULL ? 0 : \
@@ -19,10 +44,30 @@ int BinaryTreeLevelKSize(BTNode* root, int k)
 {
 	if (root == NULL)
 		return 0;
-	if (root != NULL && k == 1)
+	//if (k == 1 && root != NULL)
+	if (k == 1)
 		return 1;
-	if (root != NULL && k > 1)
-		return BinaryTreeLevelKSize(root->left, k - 1) + BinaryTreeLevelKSize(root->right, k - 1);
+	//if (k > 1 && root != NULL)
+	return BinaryTreeLevelKSize(root->left, k - 1) + BinaryTreeLevelKSize(root->right, k - 1);
+}
+
+BTNode* BinaryTreeFind(BTNode* root, BTDataType x)
+{
+	if(root == NULL)
+		return NULL;
+
+	if (root->data == x)
+		return root;
+
+	BTNode* left = BinaryTreeFind(root->left, x);
+	if (left)
+		return left;
+
+	BTNode* right = BinaryTreeFind(root->right, x);
+	if (right)
+		return right;
+
+	return NULL;
 }
 
 void BinaryTreePrevOrder(BTNode* root)//前序遍历

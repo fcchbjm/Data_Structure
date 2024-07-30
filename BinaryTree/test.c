@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS 1
 #include "BinaryTree.h"
 
 BTNode* BuyNode(BTDataType x)
@@ -54,7 +55,7 @@ int TreeHeight(BTNode* root)
 	//return fmax(TreeHeight(root->left), TreeHeight(root->right));
 }
 
-int main()
+void BTTest01()
 {
 	BTNode* root = CreatBinaryTree();
 
@@ -74,10 +75,34 @@ int main()
 
 	printf("TreeHeight:%d\n", TreeHeight(root));
 
-	printf("BinaryTreeLevelKSize(root , 1):%d\n", BinaryTreeLevelKSize(root, 1));
-	printf("BinaryTreeLevelKSize(root , 2):%d\n", BinaryTreeLevelKSize(root, 2));
-	printf("BinaryTreeLevelKSize(root , 3):%d\n", BinaryTreeLevelKSize(root, 3));
-	printf("BinaryTreeLevelKSize(root , 4):%d\n", BinaryTreeLevelKSize(root, 4));
+	printf("BinaryTreeLevelKSize(1):%d\n", BinaryTreeLevelKSize(root, 1));
+	printf("BinaryTreeLevelKSize(2):%d\n", BinaryTreeLevelKSize(root, 2));
+	printf("BinaryTreeLevelKSize(3):%d\n", BinaryTreeLevelKSize(root, 3));
+	printf("BinaryTreeLevelKSize(4):%d\n", BinaryTreeLevelKSize(root, 4));
 
+	printf("BinaryTreeFind(1):%d\n", BinaryTreeFind(root, 1)->data);
+	printf("BinaryTreeFind(2):%d\n", BinaryTreeFind(root, 2)->data);
+	printf("BinaryTreeFind(3):%d\n", BinaryTreeFind(root, 3)->data);
+	printf("BinaryTreeFind(4):%d\n", BinaryTreeFind(root, 4)->data);
+	printf("BinaryTreeFind(5):%d\n", BinaryTreeFind(root, 5)->data);
+	printf("BinaryTreeFind(6):%d\n", BinaryTreeFind(root, 6)->data);
+	printf("BinaryTreeFind(7):%p\n", BinaryTreeFind(root, 7));
+}
+
+void BTTest02()
+{
+	int arr[100] = { 0 };
+	scanf("%s", arr);
+	size_t sz = sizeof(arr) / sizeof(arr[0]);
+	int i = 0;
+	BTNode* root = BinaryTreeCreate(arr, sz, &i);
+	BinaryTreeInOrder(root);
+	printf("\n");
+
+}
+
+int main()
+{
+	BTTest02();
 	return 0;
 }
