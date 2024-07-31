@@ -43,6 +43,7 @@ BTNode* CreatBinaryTree()
 //		TreeHeight(root->left) + 1 : TreeHeight(root->right) + 1;
 //}
 
+//Ê÷µÄ¸ß¶È
 int TreeHeight(BTNode* root)
 {
 	if (root == NULL)

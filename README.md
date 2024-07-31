@@ -318,11 +318,41 @@ typedef struct Heap
 [test.c](https://github.com/fcchbjm/Data_Structure/blob/master/Heap/test.c)
 ：主函数以及部分测试功能的测试代码以及堆排序算法
 
+
 ---
 
 ## BinaryTree 二叉树
 
 
+```C
+typedef int BTDataType;
 
+typedef struct BinaryTreeNode
+{
+	BTDataType data;
+	struct BinaryTreeNode* left;
+	struct BinaryTreeNode* right;
+}BTNode;
+```
+
+### 二叉树的基本结构
+
+[BinaryTree.h](https://github.com/fcchbjm/Data_Structure/blob/master/BinaryTree/BinaryTree.h)
+：包含二叉树的结构体部分和函数的声明
+
+[BinaryTree.c](https://github.com/fcchbjm/Data_Structure/blob/master/BinaryTree/BinaryTree.c)
+：对二叉树进行相关操作的函数体部分
+
+[test.c](https://github.com/fcchbjm/Data_Structure/blob/master/BinaryTree/test.c)
+：主函数和测试代码以及部分功能性代码
+
+[Queue.h](https://github.com/fcchbjm/Data_Structure/blob/master/BinaryTree/Queue.h)
+：为实现二叉树层序遍历和判断完全二叉树而内置的队列
+
+[Queue.c](https://github.com/fcchbjm/Data_Structure/blob/master/BinaryTree/Queue.c)
+：基于双向链表实现的队列相关功能的具体实现
+
+
+---
 
 
