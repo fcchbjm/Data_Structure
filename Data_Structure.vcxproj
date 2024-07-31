@@ -22,13 +22,11 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTree\BinaryTree.c" />
-    <ClCompile Include="BinaryTree\Queue.c" />
-    <ClCompile Include="BinaryTree\test.c" />
+    <ClInclude Include="Sort\Sort.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree\BinaryTree.h" />
-    <ClInclude Include="BinaryTree\Queue.h" />
+    <ClCompile Include="Sort\Sort.c" />
+    <ClCompile Include="Sort\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>

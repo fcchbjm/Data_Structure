@@ -103,6 +103,12 @@
     <Filter Include="资源文件\BinaryTree">
       <UniqueIdentifier>{934deed4-4871-4cc2-8c2a-8f79a783ba5e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\Sort">
+      <UniqueIdentifier>{e3745768-29a4-4d67-bedf-2c1ee0f0c1f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Sort">
+      <UniqueIdentifier>{ebab8ebc-0e55-41c7-952f-67ba3eca7213}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -110,22 +116,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="BinaryTree\BinaryTree.c">
-      <Filter>源文件\BinaryTree</Filter>
-    </ClCompile>
-    <ClCompile Include="BinaryTree\test.c">
-      <Filter>源文件\BinaryTree</Filter>
-    </ClCompile>
-    <ClCompile Include="BinaryTree\Queue.c">
-      <Filter>源文件\Queue</Filter>
-    </ClCompile>
+    <ClInclude Include="Sort\Sort.h">
+      <Filter>头文件\Sort</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BinaryTree\BinaryTree.h">
-      <Filter>头文件\BinaryTree</Filter>
-    </ClInclude>
-    <ClInclude Include="BinaryTree\Queue.h">
-      <Filter>头文件\Queue</Filter>
-    </ClInclude>
+    <ClCompile Include="Sort\Sort.c">
+      <Filter>源文件\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort\test.c">
+      <Filter>源文件\Sort</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
