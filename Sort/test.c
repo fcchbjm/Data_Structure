@@ -25,7 +25,6 @@ void SortTest02()
 	PrintArray(arr, sz);
 }
 
-
 void SortTest03()
 {
 	int arr[] = { 2,3,4,1,5,6,0,9,8,7 };
@@ -34,6 +33,21 @@ void SortTest03()
 	PrintArray(arr, sz);
 }
 
+void SortTest04()
+{
+	int arr[] = { 2,3,4,1,5,6,0,9,8,7 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	ShellSort(arr, sz);
+	PrintArray(arr, sz);
+}
+
+void SortTest05()
+{
+	int arr[] = { 2,3,4,1,5,6,0,9,8,7 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	SelectSort(arr, sz);
+	PrintArray(arr, sz);
+}
 
 void TestOP()
 {
@@ -41,16 +55,51 @@ void TestOP()
 	const int N = 100000;
 
 	int* arr1 = (int*)malloc(N * sizeof(int));
+	if (arr1 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 	int* arr2 = (int*)malloc(N * sizeof(int));
+	if (arr2 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 	int* arr3 = (int*)malloc(N * sizeof(int));
+	if (arr3 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 	int* arr4 = (int*)malloc(N * sizeof(int));
+	if (arr4 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 	int* arr5 = (int*)malloc(N * sizeof(int));
+	if (arr5 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 	int* arr6 = (int*)malloc(N * sizeof(int));
+	if (arr6 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 	int* arr7 = (int*)malloc(N * sizeof(int));
+	if (arr7 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 
 	for (int i = 0; i < N; i++)
 	{
-		arr1[i] = rand();
+		arr1[i] = rand() + i;
 		arr2[i] = arr1[i];
 		arr3[i] = arr1[i];
 		arr4[i] = arr1[i];
@@ -64,11 +113,11 @@ void TestOP()
 	int end1 = clock();
 
 	int begin2 = clock();
-
+	ShellSort(arr2, N);
 	int end2 = clock();
 
 	int begin3 = clock();
-
+	SelectSort(arr3, N);
 	int end3 = clock();
 
 	int begin4 = clock();
@@ -109,8 +158,10 @@ int main()
 	//SortTest01();
 	//SortTest02();
 	//SortTest03();
+	//SortTest04();
+	SortTest05();
 
-	TestOP();
+	//TestOP();
 
 	return 0;
 }

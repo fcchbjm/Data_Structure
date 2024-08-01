@@ -32,6 +32,67 @@ void InsertSort(SortDataType* arr, int num)
 	}
 }
 
+//希尔排序
+// 时间复杂度O(N^(1.3))
+void ShellSort(SortDataType* arr, int num)
+{
+	int gap = num;
+	while (gap > 1)//gap > 1 预排序 gap == 1 插入排序
+	{
+		gap = gap / 3 + 1;//保证最后一次是1
+		for (int i = 0; i < num - gap; i++)
+		{
+			int end = i;
+			SortDataType tmp = arr[end + gap];
+			while (end >= 0)
+			{
+				if (tmp < arr[end])
+				{
+					arr[end + gap] = arr[end];
+					end -= gap;
+				}
+				else
+				{
+					break;
+				}
+			}
+			arr[end + gap] = tmp;
+		}
+		
+	}
+}
+
+//选择排序
+void SelectSort(SortDataType* arr, int num)
+{
+	int begin = 0;
+	int end = num - 1;
+	while (begin < end)
+	{
+		int mini = begin;
+		int maxi = begin;
+		for (int i = begin + 1; i <= end; i++)
+		{
+			if (arr[i] > arr[maxi])
+			{
+				maxi = i;
+			}
+			if (arr[i] > arr[mini])
+			{
+				mini = i;
+			}
+		}
+		Swap(&arr[begin], &arr[mini]);
+		if (begin == maxi)
+		{
+			maxi = mini;
+		}	 
+		Swap(&arr[end], &arr[maxi]);
+		begin++;
+		end--;
+	}
+}
+
 void AdjustDown(SortDataType* arr, int n, int parent)//堆顶元素向下调整
 {
 	//假设左孩子小
