@@ -162,9 +162,9 @@ void BubbleSort(SortDataType* arr, int num)
 
 /*
 //快速排序
-// 时间复杂度：O(NlogN)
+// 时间复杂度：最好O(NlogN)
 // 缺点：有序时，可能会栈溢出
-void QuickSort(SortDataType* arr, int left, int right)
+void QuickSort_hoare(SortDataType* arr, int left, int right)
 {
 	if (left >= right)
 		return;
@@ -188,8 +188,8 @@ void QuickSort(SortDataType* arr, int left, int right)
 	Swap(&arr[keyi], &arr[begin]);
 	keyi = begin;
 	//[left, keyi - 1] keyi [keyi + 1, end]
-	QuickSort(arr, left, keyi - 1);
-	QuickSort(arr, keyi + 1, right);
+	QuickSort_hoare(arr, left, keyi - 1);
+	QuickSort_hoare(arr, keyi + 1, right);
 }
 */
 
@@ -217,11 +217,59 @@ int GetMidi(SortDataType* arr, int left, int right)
 	}
 }
 
-//快速排序
-// 时间复杂度：O(NlogN)
+// 快速排序 - hoare法
 // 避免有序情况下，效率退化
 // 1. 随机选key
 // 2. 三数取中
+int PartSort1(SortDataType* arr, int left, int right)
+{
+	//三数取中
+	int keyi = GetMidi(arr, left, right);
+	Swap(&arr[left], &arr[keyi]);
+
+	int begin = left;
+	int end = right;
+	while (begin < end)
+	{
+		//右边找小
+		while (arr[end] >= arr[keyi] && begin < end)
+		{
+			--end;
+		}
+		//左边找大
+		while (arr[begin] <= arr[keyi] && begin < end)
+		{
+			++begin;
+		}
+		Swap(&arr[begin], &arr[end]);
+	}
+	Swap(&arr[keyi], &arr[begin]);
+	return begin;
+}
+
+//快速排序 - 前后指针法
+int PartSort2(SortDataType* arr, int left, int right)
+{
+	//三数取中
+	int keyi = GetMidi(arr, left, right);
+	Swap(&arr[left], &arr[keyi]);
+
+	int prev = left;
+	int cur = prev + 1;
+	while (cur <= right)
+	{
+		if (arr[cur] < arr[keyi] && ++prev != cur)
+		{
+			Swap(&arr[prev], &arr[cur]);
+		}
+		++cur;
+	}
+	Swap(&arr[prev], &arr[keyi]);
+	return prev;
+}
+
+//快速排序
+// 时间复杂度：最好O(NlogN)
 void QuickSort(SortDataType* arr, int left, int right)
 {
 	if (left >= right)
@@ -234,30 +282,10 @@ void QuickSort(SortDataType* arr, int left, int right)
 	}
 	else
 	{
-		//三数取中
-		int keyi = GetMidi(arr, left, right);
-		Swap(&arr[left], &arr[keyi]);
-
-		int begin = left;
-		int end = right;
-		while (begin < end)
-		{
-			//右边找小
-			while (arr[end] >= arr[keyi] && begin < end)
-			{
-				--end;
-			}
-			//左边找大
-			while (arr[begin] <= arr[keyi] && begin < end)
-			{
-				++begin;
-			}
-			Swap(&arr[begin], &arr[end]);
-		}
-		Swap(&arr[keyi], &arr[begin]);
-		keyi = begin;
+		int keyi = PartSort1(arr, left, right);
 		//[left, keyi - 1] keyi [keyi + 1, end]
 		QuickSort(arr, left, keyi - 1);
 		QuickSort(arr, keyi + 1, right);
 	}
 }
+
