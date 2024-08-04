@@ -63,6 +63,7 @@ void ShellSort(SortDataType* arr, int num)
 }
 
 //选择排序
+// 时间复杂度：O(N^2)
 void SelectSort(SortDataType* arr, int num)
 {
 	int begin = 0;
@@ -156,5 +157,107 @@ void BubbleSort(SortDataType* arr, int num)
 		{
 			break;
 		}
+	}
+}
+
+/*
+//快速排序
+// 时间复杂度：O(NlogN)
+// 缺点：有序时，可能会栈溢出
+void QuickSort(SortDataType* arr, int left, int right)
+{
+	if (left >= right)
+		return;
+	int keyi = left;
+	int begin = left;
+	int end = right;
+	while (begin < end)
+	{
+		//右边找小
+		while (arr[end] >= arr[keyi] && begin < end)
+		{
+			--end;
+		}
+		//左边找大
+		while (arr[begin] <= arr[keyi] && begin < end)
+		{
+			++begin;
+		}
+		Swap(&arr[begin], &arr[end]);
+	}
+	Swap(&arr[keyi], &arr[begin]);
+	keyi = begin;
+	//[left, keyi - 1] keyi [keyi + 1, end]
+	QuickSort(arr, left, keyi - 1);
+	QuickSort(arr, keyi + 1, right);
+}
+*/
+
+int GetMidi(SortDataType* arr, int left, int right)
+{
+	int midi = (left + right) / 2;
+	//left midi right
+	if (arr[left] < arr[midi])
+	{
+		if (arr[midi] < arr[right])
+			return midi;
+		else if (arr[left] < arr[right])
+			return right;
+		else
+			return left;
+	}
+	else //arr[left] >= arr[midi]
+	{
+		if (arr[midi] > arr[right])
+			return midi;
+		else if (arr[left] < arr[right])
+			return left;
+		else
+			return right;
+	}
+}
+
+//快速排序
+// 时间复杂度：O(NlogN)
+// 避免有序情况下，效率退化
+// 1. 随机选key
+// 2. 三数取中
+void QuickSort(SortDataType* arr, int left, int right)
+{
+	if (left >= right)
+		return;
+
+	//小区间优化 -- 不再递归分割排序，减少递归次数
+	if ((right - left + 1) < 10)
+	{
+		InsertSort(arr + left, right - left + 1);
+	}
+	else
+	{
+		//三数取中
+		int keyi = GetMidi(arr, left, right);
+		Swap(&arr[left], &arr[keyi]);
+
+		int begin = left;
+		int end = right;
+		while (begin < end)
+		{
+			//右边找小
+			while (arr[end] >= arr[keyi] && begin < end)
+			{
+				--end;
+			}
+			//左边找大
+			while (arr[begin] <= arr[keyi] && begin < end)
+			{
+				++begin;
+			}
+			Swap(&arr[begin], &arr[end]);
+		}
+		Swap(&arr[keyi], &arr[begin]);
+		keyi = begin;
+		//[left, keyi - 1] keyi [keyi + 1, end]
+		QuickSort(arr, left, keyi - 1);
+		QuickSort(arr, keyi + 1, right);
 	}
 }

@@ -49,6 +49,15 @@ void SortTest05()
 	PrintArray(arr, sz);
 }
 
+void SortTest06()
+{
+	int arr[] = { 6,1,5,7,9,3,4,5,10,8 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	PrintArray(arr, sz);
+	QuickSort(arr, 0, sz);
+	PrintArray(arr, sz);
+}
+
 void TestOP()
 {
 	srand(time(NULL));
@@ -99,6 +108,9 @@ void TestOP()
 
 	for (int i = 0; i < N; i++)
 	{
+		//重复很多
+		//arr1[i] = rand();
+		//重复不多
 		arr1[i] = rand() + i;
 		arr2[i] = arr1[i];
 		arr3[i] = arr1[i];
@@ -125,7 +137,7 @@ void TestOP()
 	int end4 = clock();
 
 	int begin5 = clock();
-
+	QuickSort(arr5, 0, N);
 	int end5 = clock();
 
 	int begin6 = clock();
@@ -159,9 +171,10 @@ int main()
 	//SortTest02();
 	//SortTest03();
 	//SortTest04();
-	SortTest05();
+	//SortTest05();
+	//SortTest06();
 
-	//TestOP();
+	TestOP();
 
 	return 0;
 }

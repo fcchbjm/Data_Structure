@@ -12,7 +12,7 @@ void InsertSort(SortDataType* arr, int num);
 //œ£∂˚≈≈–Ú
 void ShellSort(SortDataType* arr, int num);
 
-//≤Â»Î≈≈–Ú
+//—°‘Ò≈≈–Ú
 void SelectSort(SortDataType* arr, int num);
 
 //∂—≈≈–Ú
@@ -20,3 +20,8 @@ void HeapSort(SortDataType* arr, int num);
 
 //√∞≈›≈≈–Ú
 void BubbleSort(SortDataType* arr, int num);
+
+//øÏÀŸ≈≈–Ú
+void QuickSort(SortDataType* arr, int left, int right);
+
+
