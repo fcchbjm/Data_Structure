@@ -2,9 +2,12 @@
 
 void Swap(SortDataType* p1, SortDataType* p2)
 {
-	SortDataType tmp = *p1;
-	*p1 = *p2;
-	*p2 = tmp;
+	if (p1 != p2)
+	{
+		SortDataType tmp = *p1;
+		*p1 = *p2;
+		*p2 = tmp;
+	}
 }
 
 //插入排序
@@ -268,9 +271,14 @@ int PartSort2(SortDataType* arr, int left, int right)
 	return prev;
 }
 
-//快速排序
-// 时间复杂度：最好O(NlogN)
-void QuickSort(SortDataType* arr, int left, int right)
+//快速排序 - 非递归版本
+void QuickSortNonR(SortDataType* arr, int left, int right)
+{
+
+}
+
+//快速排序 - 递归版本
+void QuickSortRec(SortDataType* arr, int left, int right)
 {
 	if (left >= right)
 		return;
@@ -282,10 +290,19 @@ void QuickSort(SortDataType* arr, int left, int right)
 	}
 	else
 	{
-		int keyi = PartSort1(arr, left, right);
+		//int keyi = PartSort1(arr, left, right);
+		int keyi = PartSort2(arr, left, right);
+		//int keyi = PartSort1(arr, left, right);
 		//[left, keyi - 1] keyi [keyi + 1, end]
 		QuickSort(arr, left, keyi - 1);
 		QuickSort(arr, keyi + 1, right);
 	}
+}
+
+//快速排序
+// 时间复杂度：最好O(NlogN)
+void QuickSort(SortDataType* arr, int left, int right)
+{
+	QuickSortRec(arr, left, right);
 }
 
