@@ -24,4 +24,5 @@ void BubbleSort(SortDataType* arr, int num);
 //¿ìËÙÅÅĞò
 void QuickSort(SortDataType* arr, int left, int right);
 
-
+//¹é²¢ÅÅĞò
+void MergeSort(SortDataType* arr, int num);

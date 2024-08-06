@@ -23,9 +23,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sort\Sort.h" />
+    <ClInclude Include="Sort\Stack.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sort\Sort.c" />
+    <ClCompile Include="Sort\Stack.c" />
     <ClCompile Include="Sort\test.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

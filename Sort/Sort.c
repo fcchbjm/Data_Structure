@@ -227,9 +227,10 @@ int GetMidi(SortDataType* arr, int left, int right)
 int PartSort1(SortDataType* arr, int left, int right)
 {
 	//三数取中
-	int keyi = GetMidi(arr, left, right);
-	Swap(&arr[left], &arr[keyi]);
+	int midi = GetMidi(arr, left, right);
+	Swap(&arr[left], &arr[midi]);
 
+	int keyi = left;
 	int begin = left;
 	int end = right;
 	while (begin < end)
@@ -254,8 +255,9 @@ int PartSort1(SortDataType* arr, int left, int right)
 int PartSort2(SortDataType* arr, int left, int right)
 {
 	//三数取中
-	int keyi = GetMidi(arr, left, right);
-	Swap(&arr[left], &arr[keyi]);
+	int midi = GetMidi(arr, left, right);
+	Swap(&arr[left], &arr[midi]);
+	int keyi = left;
 
 	int prev = left;
 	int cur = prev + 1;
@@ -269,12 +271,6 @@ int PartSort2(SortDataType* arr, int left, int right)
 	}
 	Swap(&arr[prev], &arr[keyi]);
 	return prev;
-}
-
-//快速排序 - 非递归版本
-void QuickSortNonR(SortDataType* arr, int left, int right)
-{
-
 }
 
 //快速排序 - 递归版本
@@ -292,17 +288,71 @@ void QuickSortRec(SortDataType* arr, int left, int right)
 	{
 		//int keyi = PartSort1(arr, left, right);
 		int keyi = PartSort2(arr, left, right);
-		//int keyi = PartSort1(arr, left, right);
+		
 		//[left, keyi - 1] keyi [keyi + 1, end]
 		QuickSort(arr, left, keyi - 1);
 		QuickSort(arr, keyi + 1, right);
 	}
 }
 
+#include "Stack.h"
+
+//快速排序 - 非递归版本
+void QuickSortNonR(SortDataType* arr, int left, int right)
+{
+	ST st;
+	STInit(&st);
+	STPush(&st, right);
+	STPush(&st, left);
+
+	while (!STEmpty(&st))
+	{
+		int begin = STTop(&st);
+		STPop(&st);
+		int end = STTop(&st);
+		STPop(&st);
+
+		//单趟排序
+		int keyi = PartSort2(arr, begin, end);
+		//[begin, keti - 1] keyi [keyi + 1, end]
+		
+		if (keyi + 1 < end)
+		{
+			//右区间入栈
+			STPush(&st, end);
+			STPush(&st, keyi + 1);
+		}
+
+		if (begin < keyi - 1)
+		{
+			//左区间入栈
+			STPush(&st, keyi - 1);
+			STPush(&st, begin);
+		}
+	}
+	STDestroy(&st);
+}
+
 //快速排序
 // 时间复杂度：最好O(NlogN)
 void QuickSort(SortDataType* arr, int left, int right)
 {
-	QuickSortRec(arr, left, right);
+	//QuickSortRec(arr, left, right);
+	QuickSortNonR(arr, left, right);
+}
+
+//归并排序 - 递归版本
+void MergeSortRec(SortDataType* arr, int num)
+{
+}
+
+//归并排序 - 非递归版本
+void MergeSortNonR(SortDataType* arr, int num)
+{
+}
+
+//归并排序
+void MergeSort(SortDataType* arr, int num)
+{
 }
 

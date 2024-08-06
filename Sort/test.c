@@ -54,7 +54,7 @@ void SortTest06()
 	int arr[] = { 6,1,5,7,9,3,4,5,10,8 };
 	int sz = sizeof(arr) / sizeof(arr[0]);
 	PrintArray(arr, sz);
-	QuickSort(arr, 0, sz);
+	QuickSort(arr, 0, sz - 1);
 	PrintArray(arr, sz);
 }
 
@@ -172,9 +172,9 @@ int main()
 	//SortTest03();
 	//SortTest04();
 	//SortTest05();
-	//SortTest06();
+	SortTest06();
 
-	TestOP();
+	//TestOP();
 
 	return 0;
 }

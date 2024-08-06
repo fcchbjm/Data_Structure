@@ -119,6 +119,9 @@
     <ClInclude Include="Sort\Sort.h">
       <Filter>头文件\Sort</Filter>
     </ClInclude>
+    <ClInclude Include="Sort\Stack.h">
+      <Filter>头文件\Stack</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Sort\Sort.c">
@@ -126,6 +129,9 @@
     </ClCompile>
     <ClCompile Include="Sort\test.c">
       <Filter>源文件\Sort</Filter>
+    </ClCompile>
+    <ClCompile Include="Sort\Stack.c">
+      <Filter>源文件\Stack</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
