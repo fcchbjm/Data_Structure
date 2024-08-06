@@ -58,6 +58,15 @@ void SortTest06()
 	PrintArray(arr, sz);
 }
 
+void SortTest07()
+{
+	int arr[] = { 6,1,5,7,9,3,4,5,10,8 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	PrintArray(arr, sz);
+	MergeSort(arr, sz);
+	PrintArray(arr, sz);
+}
+
 void TestOP()
 {
 	srand(time(NULL));
@@ -172,7 +181,8 @@ int main()
 	//SortTest03();
 	//SortTest04();
 	//SortTest05();
-	SortTest06();
+	//SortTest06();
+	SortTest07();
 
 	//TestOP();
 

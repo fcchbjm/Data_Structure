@@ -341,9 +341,65 @@ void QuickSort(SortDataType* arr, int left, int right)
 	QuickSortNonR(arr, left, right);
 }
 
+void _MergeSortRec(SortDataType* arr, SortDataType* tmp, int begin, int end)
+{
+	//区间只有一个值
+	if (begin == end)
+	{
+		return;
+	}
+
+	int mid = (begin + end) / 2;
+	//如果[begin, mid - 1] [mid, end]有序，就可以进行归并
+	_MergeSortRec(arr, tmp, begin, mid);
+	_MergeSortRec(arr, tmp, mid + 1, end);
+
+	//归并
+	int begin1 = begin;
+	int end1 = mid;
+	int begin2 = mid + 1;
+	int end2 = end;
+	int i = begin;
+	//比较，小的放在前面
+	while (begin1 <= end1 && begin2 <= end2)
+	{
+		if (arr[begin1] < arr[begin2])
+		{
+			tmp[i++] = arr[begin1++];
+		}
+		else
+		{
+			tmp[i++] = arr[begin2++];
+		}
+	}
+
+	//剩下的内容放在末尾，两个循环只会进入一个
+	while (begin1 <= end1)
+	{
+		tmp[i++] = arr[begin1++];
+	}
+	while (begin2 <= end2)
+	{
+		tmp[i++] = arr[begin2++];
+	}
+
+	memcpy(arr + begin, tmp + begin, (end - begin + 1) * sizeof(SortDataType));
+}
+
 //归并排序 - 递归版本
 void MergeSortRec(SortDataType* arr, int num)
 {
+	SortDataType* tmp = (SortDataType*)malloc(sizeof(SortDataType) * num);
+	if (tmp == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
+
+	_MergeSortRec(arr, tmp, 0, num - 1);
+
+	free(tmp);
+	tmp = NULL;
 }
 
 //归并排序 - 非递归版本
@@ -354,5 +410,6 @@ void MergeSortNonR(SortDataType* arr, int num)
 //归并排序
 void MergeSort(SortDataType* arr, int num)
 {
+	MergeSortRec(arr, num);
 }
 
