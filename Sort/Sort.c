@@ -405,11 +405,119 @@ void MergeSortRec(SortDataType* arr, int num)
 //归并排序 - 非递归版本
 void MergeSortNonR(SortDataType* arr, int num)
 {
+	SortDataType* tmp = (SortDataType*)malloc(sizeof(SortDataType) * num);
+	if (tmp == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
+
+	//每组归并数据的个数
+	int gap = 1;
+	while (gap < num)
+	{
+		for (int i = 0; i < num; i += 2 * gap)
+		{
+			// [begin1, end1][begin2, end2]
+			int begin1 = i;
+			int end1 = i + gap - 1;
+			int begin2 = i + gap;
+			int end2 = i + 2 * gap - 1;
+
+			//第二组越界不存在，这一组不需要归并
+			if (begin2 >= num)
+			{
+				break;
+			}
+			//第二组end2越界不存在，进行修正，继续归并
+			if(end2 >= num)
+			{
+				end2 = num - 1;
+			}
+
+			int j = i;
+			while (begin1 <= end1 && begin2 <= end2)
+			{
+				if (arr[begin1] < arr[begin2])
+				{
+					tmp[j++] = arr[begin1++];
+				}
+				else
+				{
+					tmp[j++] = arr[begin2++];
+				}
+			}
+
+			while (begin1 <= end1)
+			{
+				tmp[j++] = arr[begin1++];
+			}
+			while (begin2 <= end2)
+			{
+				tmp[j++] = arr[begin2++];
+			}
+
+			memcpy(arr + i, tmp + i, (end2 - i + 1) * sizeof(SortDataType));
+		}
+		gap *= 2;
+	}
+
+	free(tmp);
+	tmp = NULL;
 }
 
 //归并排序
+// 时间复杂度：O(NlogN)
+// 空间复杂度：O(N)
 void MergeSort(SortDataType* arr, int num)
 {
-	MergeSortRec(arr, num);
+	//MergeSortRec(arr, num);
+	MergeSortNonR(arr, num);
+}
+
+//计数排序
+// 时间复杂度:O(N+range)
+// 只适合整数/适合范围集中
+// 空间范围度：O(range)
+void CountSort(int* arr, int num)
+{
+	int min = arr[0];
+	int max = arr[0];
+	for (int i = 1; i < num; i++)
+	{
+		if (arr[i] < min)
+			min = arr[i];
+
+		if (arr[i] > max)
+			max = arr[i];
+	}
+
+	int range = max - min + 1;
+
+	int* count = (int*)calloc(range, sizeof(int));
+	if (count == NULL)
+	{
+		perror("calloc failed");
+		return;
+	}
+
+	// 统计次数
+	for (int i = 0; i < num; i++)
+	{
+		count[arr[i] - min]++;
+	}
+
+	// 排序
+	int j = 0;
+	for (int i = 0; i < range; i++)
+	{
+		while (count[i]--)
+		{
+			arr[j++] = i + min;
+		}
+	}
+
+	free(count);
+	count = NULL;
 }
 

@@ -1,4 +1,5 @@
 #include "Sort.h"
+#include "vld.h"
 
 void PrintArray(int* arr, int sz)
 {
@@ -61,11 +62,30 @@ void SortTest06()
 void SortTest07()
 {
 	int arr[] = { 6,1,5,7,9,3,4,5,10,8 };
+	int arr2[] = { 10,6,7,1,3,9,4,2 };
+	int arr3[] = { 2,3,4,1,5,6,0,9,8,7 };
 	int sz = sizeof(arr) / sizeof(arr[0]);
+	int sz2 = sizeof(arr2) / sizeof(arr[0]);
+	int sz3 = sizeof(arr3) / sizeof(arr[0]);
 	PrintArray(arr, sz);
 	MergeSort(arr, sz);
 	PrintArray(arr, sz);
+	PrintArray(arr2, sz2);
+	MergeSort(arr2, sz2);
+	PrintArray(arr2, sz2);
+	PrintArray(arr3, sz3);
+	MergeSort(arr3, sz3);
+	PrintArray(arr3, sz3);
 }
+
+void SortTest08()
+{
+	int arr[] = { 2,3,4,1,5,6,0,9,8,7 };
+	int sz = sizeof(arr) / sizeof(arr[0]);
+	CountSort(arr, sz);
+	PrintArray(arr, sz);
+}
+
 
 void TestOP()
 {
@@ -114,6 +134,12 @@ void TestOP()
 		perror("malloc failed");
 		return;
 	}
+	int* arr8 = (int*)malloc(N * sizeof(int));
+	if (arr8 == NULL)
+	{
+		perror("malloc failed");
+		return;
+	}
 
 	for (int i = 0; i < N; i++)
 	{
@@ -127,6 +153,7 @@ void TestOP()
 		arr5[i] = arr1[i];
 		arr6[i] = arr1[i];
 		arr7[i] = arr1[i];
+		arr8[i] = arr1[i];
 	}
 
 	int begin1 = clock();
@@ -150,12 +177,16 @@ void TestOP()
 	int end5 = clock();
 
 	int begin6 = clock();
-
+	MergeSort(arr6, N);
 	int end6 = clock();
 
 	int begin7 = clock();
 	BubbleSort(arr7, N);
 	int end7 = clock();
+
+	int begin8 = clock();
+	CountSort(arr8, N);
+	int end8 = clock();
 
 	printf("InsertSort:%d\n", end1 - begin1);
 	printf("ShellSort:%d\n", end2 - begin2);
@@ -164,6 +195,7 @@ void TestOP()
 	printf("QuickSort:%d\n", end5 - begin5);
 	printf("MergeSort:%d\n", end6 - begin6);
 	printf("BubbleSort:%d\n", end7 - begin7);
+	printf("CountSort:%d\n", end8 - begin8);
 
 	free(arr1);
 	free(arr2);
@@ -172,6 +204,7 @@ void TestOP()
 	free(arr5);
 	free(arr6);
 	free(arr7);
+	free(arr8);
 }
 
 int main()
@@ -182,9 +215,10 @@ int main()
 	//SortTest04();
 	//SortTest05();
 	//SortTest06();
-	SortTest07();
+	//SortTest07();
+	//SortTest08();
 
-	//TestOP();
+	TestOP();
 
 	return 0;
 }
