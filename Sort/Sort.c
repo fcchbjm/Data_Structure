@@ -363,7 +363,7 @@ void _MergeSortRec(SortDataType* arr, SortDataType* tmp, int begin, int end)
 	//比较，小的放在前面
 	while (begin1 <= end1 && begin2 <= end2)
 	{
-		if (arr[begin1] < arr[begin2])
+		if (arr[begin1] <= arr[begin2])
 		{
 			tmp[i++] = arr[begin1++];
 		}
@@ -438,7 +438,7 @@ void MergeSortNonR(SortDataType* arr, int num)
 			int j = i;
 			while (begin1 <= end1 && begin2 <= end2)
 			{
-				if (arr[begin1] < arr[begin2])
+				if (arr[begin1] <= arr[begin2])
 				{
 					tmp[j++] = arr[begin1++];
 				}

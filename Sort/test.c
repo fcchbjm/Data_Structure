@@ -173,7 +173,7 @@ void TestOP()
 	int end4 = clock();
 
 	int begin5 = clock();
-	QuickSort(arr5, 0, N);
+	QuickSort(arr5, 0, N - 1);
 	int end5 = clock();
 
 	int begin6 = clock();
