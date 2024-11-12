@@ -1,8 +1,8 @@
 # Data Structure 数据结构
 
-Implement data structures in C
+Implement data structures in C/C++
 
-**本仓库我们在C语言的基础上简单的实现部分数据结构**
+**本仓库我们在C语言和C++的基础上实现部分数据结构**
 
 
 ---
