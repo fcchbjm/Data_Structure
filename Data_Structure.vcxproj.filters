@@ -109,6 +109,18 @@
     <Filter Include="源文件\Sort">
       <UniqueIdentifier>{ebab8ebc-0e55-41c7-952f-67ba3eca7213}</UniqueIdentifier>
     </Filter>
+    <Filter Include="头文件\UnionFindSet">
+      <UniqueIdentifier>{b07e2dd5-454d-459e-a3eb-697eb0d5b9ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\UnionFindSet">
+      <UniqueIdentifier>{434fe281-a56a-4aa5-92d3-a93f294b660f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\UnionFindSet">
+      <UniqueIdentifier>{ce0cbb75-86ab-4a52-bb09-d601fad192b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源文件\Sort">
+      <UniqueIdentifier>{6c734e6a-a330-4e2c-b774-c3a5c900388d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md">
@@ -116,22 +128,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sort\Sort.h">
-      <Filter>头文件\Sort</Filter>
+    <ClInclude Include="UnionFindSet\UnionFindSet.h">
+      <Filter>头文件\UnionFindSet</Filter>
     </ClInclude>
-    <ClInclude Include="Sort\Stack.h">
-      <Filter>头文件\Stack</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Sort\Sort.c">
-      <Filter>源文件\Sort</Filter>
-    </ClCompile>
-    <ClCompile Include="Sort\test.c">
-      <Filter>源文件\Sort</Filter>
-    </ClCompile>
-    <ClCompile Include="Sort\Stack.c">
-      <Filter>源文件\Stack</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

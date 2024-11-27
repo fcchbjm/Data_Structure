@@ -22,13 +22,7 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Sort\Sort.h" />
-    <ClInclude Include="Sort\Stack.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Sort\Sort.c" />
-    <ClCompile Include="Sort\Stack.c" />
-    <ClCompile Include="Sort\test.c" />
+    <ClInclude Include="UnionFindSet\UnionFindSet.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
