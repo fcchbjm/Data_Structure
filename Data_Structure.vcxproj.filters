@@ -127,9 +127,4 @@
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="UnionFindSet\UnionFindSet.h">
-      <Filter>头文件\UnionFindSet</Filter>
-    </ClInclude>
-  </ItemGroup>
 </Project>
