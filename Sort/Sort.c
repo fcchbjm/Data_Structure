@@ -81,7 +81,7 @@ void SelectSort(SortDataType* arr, int num)
 			{
 				maxi = i;
 			}
-			if (arr[i] > arr[mini])
+			if (arr[i] < arr[mini])
 			{
 				mini = i;
 			}
@@ -290,8 +290,8 @@ void QuickSortRec(SortDataType* arr, int left, int right)
 		int keyi = PartSort2(arr, left, right);
 		
 		//[left, keyi - 1] keyi [keyi + 1, end]
-		QuickSort(arr, left, keyi - 1);
-		QuickSort(arr, keyi + 1, right);
+		QuickSortRec(arr, left, keyi - 1);
+		QuickSortRec(arr, keyi + 1, right);
 	}
 }
 
